@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>História</title>
-
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>História Microlearning</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png" sizes="192x192">
 </head>
 <body>
+  <header>
+    <h1>História Microlearning</h1>
+  </header>
 
-  <div id="app">
-    <header>
-      <h1>História</h1>
-    </header>
-
-    <main id="view"></main>
-  </div>
-
-  <!-- POPUP -->
-  <div id="popup" class="popup hidden">
-    <div class="popup-card">
-      <h2>Que pena 😕</h2>
-      <p>Você errou. Tente novamente.</p>
-      <button id="btn-voltar">Voltar ao início</button>
-    </div>
-  </div>
-
-  <canvas id="confetti"></canvas>
+  <main id="civilizations-container">
+    <!-- Civilizações carregadas via JS -->
+  </main>
 
   <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js');
-    }
-  </script>
 </body>
 </html>
