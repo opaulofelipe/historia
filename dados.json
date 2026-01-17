@@ -1,18 +1,9 @@
 {
-  "civilizations": [
-    {
-      "id": "mesopotamia",
-      "name": "Mesopotâmia",
-      "pages": [
-        {
-          "title": "Origens da Mesopotâmia",
-          "text": "A Mesopotâmia, conhecida como o berço da civilização, localiza-se entre os rios Tigre e Eufrates. As primeiras cidades surgiram por volta de 4000 a.C., com desenvolvimento de agricultura irrigada, escrita cuneiforme e organização política complexa. Sua história é marcada por cidades-estado como Ur, Uruk e Lagash, e a construção de templos monumentais, os zigurates."
-        },
-        {
-          "title": "Sociedade e Cultura",
-          "text": "A sociedade mesopotâmica era hierarquizada, com reis, sacerdotes, comerciantes e agricultores. Criaram leis codificadas, como o Código de Hamurabi. Desenvolveram avanços em matemática, astronomia e arquitetura. As religiões eram politeístas, com deuses associados a elementos naturais. A escrita cuneiforme foi usada para registros administrativos, religiosos e literários."
-        }
-      ]
-    }
-  ]
+  "mesopotamia": {
+    "titulo": "Mesopotâmia",
+    "textos": [
+      "Mesopotâmia significa literalmente “terra entre rios”: Tigre e Eufrates. Essa faixa de planícies aluviais, onde hoje ficam principalmente Iraque e partes da Síria e da Turquia, foi um dos primeiros lugares do mundo a reunir, ao mesmo tempo, agricultura irrigada, cidades, administração e escrita. O ambiente era fértil, mas instável: cheias irregulares e terras abertas exigiam diques, canais e cooperação coletiva, o que favoreceu a formação de autoridades locais. Por volta do fim do IV milênio a.C., cidades como Uruk cresceram com templos, oficinas e sistemas de arrecadação. Surgiram especialistas (escribas, artesãos), hierarquias sociais e uma política centrada na cidade-estado. Para registrar estoques, tributos e contratos, os sumérios desenvolveram a escrita cuneiforme em tábuas de argila — um marco decisivo na história humana, pois permitiu memória institucional e decisões mais complexas do que a simples tradição oral.",
+      "Com o tempo, a Mesopotâmia virou um mosaico de povos e impérios: sumérios, acádios, babilônios, assírios e caldeus disputaram rotas, campos irrigados e prestígio religioso. A Babilônia de Hamurábi ficou famosa por consolidar leis em inscrições públicas, estabelecendo penas e compensações diferentes conforme o status social — mostrando que “lei” não era sinônimo de igualdade, mas de ordem. Culturalmente, a região criou uma literatura poderosa: a Epopeia de Gilgamesh, considerada a grande obra narrativa mais antiga que conhecemos, discute amizade, poder e a busca pela imortalidade em um mundo finito. A observação dos astros alimentou calendários e previsões; a matemática sexagesimal deixou heranças visíveis até hoje (60 segundos, 60 minutos). E, entre os nomes marcantes, está Enheduanna (c. séc. XXIII a.C.), sacerdotisa e poetisa, frequentemente citada como a autora identificável mais antiga da história, com hinos dedicados à deusa Inanna — prova de que a escrita também registrou cultura, fé e visão de mundo, não apenas contabilidade."
+    ]
+  }
 }
