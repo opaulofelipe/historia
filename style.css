@@ -1,112 +1,120 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  margin: 0;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: #e5e7eb;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px;
 }
 
-header {
-  margin-bottom: 20px;
+#app {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
 }
 
-h1 {
-  font-size: 1.8rem;
-  color: #111;
+header h1 {
   text-align: center;
+  font-weight: 650;
+  opacity: 0.92;
+  letter-spacing: 0.2px;
 }
 
-/* Container das civilizações */
-#container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-/* Card */
 .card {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
+  backdrop-filter: blur(18px);
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.clickable {
   cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+.clickable:active {
+  transform: scale(0.995);
 }
 
-.card h2 {
-  margin-bottom: 10px;
-  font-size: 1.3rem;
+.progress {
+  height: 8px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 10px;
 }
 
-/* Barra de progresso */
-.progress-container {
-  background: rgba(255,255,255,0.3);
-  border-radius: 8px;
-  height: 12px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.progress-bar {
+.progress span {
+  display: block;
   height: 100%;
-  border-radius: 8px;
-  background: #4caf50;
-  width: 0%;
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
 }
 
-/* Página de lição */
-.lesson-page {
-  max-width: 800px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 20px;
+.muted {
+  opacity: 0.78;
+  font-size: 13px;
 }
 
-.lesson-page h2 {
-  margin-bottom: 15px;
+.read-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
-.lesson-page p {
-  margin-bottom: 20px;
+.pill {
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  font-size: 12px;
+  opacity: 0.92;
+  white-space: nowrap;
 }
 
-.lesson-page button {
-  background: #4caf50;
+.text-body {
+  line-height: 1.65;
+  font-size: 15px;
+  color: rgba(229,231,235,0.94);
+  white-space: pre-wrap;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn {
+  flex: 1;
   border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 14px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
 }
 
-.lesson-page button:hover {
-  background: #45a049;
+.btn-primary {
+  background: rgba(34,197,94,0.20);
+  box-shadow: 0 8px 22px rgba(34,197,94,0.10);
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-  .card {
-    padding: 15px;
-  }
+.btn-ghost {
+  background: rgba(255,255,255,0.08);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+canvas#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
 }
