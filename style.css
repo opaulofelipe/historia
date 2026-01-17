@@ -13,40 +13,81 @@ body {
 #app {
   max-width: 420px;
   margin: auto;
-  padding: 20px;
+  padding: 18px 20px 20px;
 }
 
-header h1 {
-  text-align: center;
-  font-weight: 650;
-  opacity: 0.92;
+/* Top bar */
+.topbar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 14px;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
   letter-spacing: 0.2px;
 }
 
+/* Card base */
 .card {
   backdrop-filter: blur(18px);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
   border-radius: 18px;
   padding: 20px;
   margin-bottom: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-.clickable {
-  cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+/* ===== HEADER DE LEITURA (GRID CORRETO) ===== */
+.read-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 12px;
+  margin-bottom: 12px;
 }
 
-.clickable:active {
-  transform: scale(0.995);
+/* Título da civilização */
+.civ-badge {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  font-size: 16px;
+  font-weight: 650;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
+/* Texto X de Y (fica à esquerda, após o título) */
+.text-counter {
+  font-size: 13px;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+/* Percentual (ALINHADO À DIREITA) */
+.percent-pill {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Barra de progresso */
 .progress {
   height: 8px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.15);
   border-radius: 999px;
   overflow: hidden;
-  margin-top: 10px;
 }
 
 .progress span {
@@ -55,101 +96,49 @@ header h1 {
   background: linear-gradient(90deg, #22c55e, #4ade80);
 }
 
-.muted {
-  opacity: 0.78;
-  font-size: 13px;
-}
-
-/* ===== Leitura (alinhamento perfeito) ===== */
-.read-top {
-  display: flex;
-  align-items: center;        /* alinha tudo no mesmo eixo */
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.read-title {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 650;
-  letter-spacing: 0.2px;
-  line-height: 1.2;
-}
-
-.pill-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.pill {
-  height: 32px;               /* mesma altura sempre */
-  padding: 0 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.10);
-  font-size: 12px;
-  opacity: 0.92;
-  white-space: nowrap;
-
-  display: inline-flex;       /* centraliza texto verticalmente */
-  align-items: center;
-  justify-content: center;
-}
-
-/* Texto justificado + espaçamento de parágrafos */
+/* Texto */
 .text-body {
-  line-height: 1.65;
+  margin-top: 14px;
   font-size: 15px;
-  color: rgba(229, 231, 235, 0.94);
+  line-height: 1.65;
   text-align: justify;
+  color: rgba(229,231,235,0.94);
 }
 
 .text-body p {
-  margin: 0 0 8px 0;          /* 8px entre parágrafos */
+  margin: 0 0 8px 0;
 }
 
 .text-body p:last-child {
   margin-bottom: 0;
 }
 
-/* Botões */
+/* Ações */
 .actions {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;  /* Início / Anterior / Próximo */
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 .btn {
   border: none;
   border-radius: 14px;
-  padding: 12px 12px;
+  padding: 12px;
   font-size: 14px;
-  background: rgba(255, 255, 255, 0.12);
+  min-height: 44px;
+  background: rgba(255,255,255,0.12);
   color: #fff;
-  min-height: 44px;           /* toque confortável (UX) */
 }
 
 .btn-primary {
-  background: rgba(34, 197, 94, 0.20);
-  box-shadow: 0 8px 22px rgba(34, 197, 94, 0.10);
+  background: rgba(34,197,94,0.22);
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.btn:active {
-  transform: translateY(1px);
+  background: rgba(255,255,255,0.08);
 }
 
 .btn[disabled] {
   opacity: 0.45;
-}
-
-canvas#confetti {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
 }
