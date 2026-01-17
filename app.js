@@ -2,7 +2,12 @@ const view = document.getElementById("view");
 
 let dados = {};
 let civAtual = null;
+
+// indice = qual texto está sendo exibido agora
 let indice = 0;
+
+// concluido = quantos textos já foram concluídos (progresso real salvo)
+let concluido = 0;
 
 fetch("./dados.json")
   .then(r => r.json())
@@ -31,11 +36,9 @@ function clamp(n, min, max) {
   return Math.max(min, Math.min(max, n));
 }
 
-function percentDone(currentIndex, total) {
-  // currentIndex = índice do texto atual (0..total)
-  // concluído = quantos textos já foram completados (igual ao índice quando você está lendo o próximo)
-  const done = clamp(currentIndex, 0, total);
-  return Math.floor((done / total) * 100);
+function calcPercent(done, total) {
+  if (!total) return 0;
+  return Math.floor((clamp(done, 0, total) / total) * 100);
 }
 
 function renderHome() {
@@ -44,11 +47,11 @@ function renderHome() {
   Object.keys(dados).forEach(civ => {
     const total = dados[civ].textos.length;
     const p = clamp(getProgresso(civ), 0, total);
-    const percent = percentDone(p, total);
+    const percent = calcPercent(p, total);
 
     view.innerHTML += `
       <div class="card clickable" onclick="iniciar('${civ}')">
-        <h2>${dados[civ].titulo}</h2>
+        <h2 style="margin:0 0 10px 0;">${dados[civ].titulo}</h2>
         <div class="progress"><span style="width:${percent}%"></span></div>
         <div class="muted" style="margin-top:8px;">
           ${percent}% concluído • ${p}/${total} textos
@@ -62,9 +65,10 @@ function iniciar(civ) {
   civAtual = civ;
   const total = dados[civAtual].textos.length;
 
-  // Progresso salvo representa "quantos textos já completei"
-  // Então o próximo a ler é exatamente esse índice
-  indice = clamp(getProgresso(civAtual), 0, total);
+  concluido = clamp(getProgresso(civAtual), 0, total);
+
+  // ao abrir, mostra o "próximo não concluído"
+  indice = clamp(concluido, 0, total);
 
   renderLeitura();
 }
@@ -78,27 +82,31 @@ function renderLeitura() {
     return;
   }
 
-  const percent = percentDone(indice, total);
-  const t = dados[civAtual].textos[indice];
+  const percent = calcPercent(concluido, total);
+  const textoCru = dados[civAtual].textos[indice];
 
   view.innerHTML = `
     <div class="card">
-      <div class="read-header">
-        <div>
-          <div class="muted" style="margin-bottom:4px;">${dados[civAtual].titulo}</div>
+      <div class="read-top">
+        <h2 class="read-title">${dados[civAtual].titulo}</h2>
+
+        <div class="pill-row">
           <div class="pill">Texto ${indice + 1} de ${total}</div>
+          <div class="pill">${percent}%</div>
         </div>
-        <div class="pill">${percent}%</div>
       </div>
 
       <div class="progress"><span style="width:${percent}%"></span></div>
 
       <div style="height:14px;"></div>
 
-      <div class="text-body">${escapeHtml(t)}</div>
+      <div class="text-body">
+        ${toParagraphs(textoCru)}
+      </div>
 
       <div class="actions">
         <button class="btn btn-ghost" onclick="voltarHome()">Início</button>
+        <button class="btn" onclick="anterior()" ${indice === 0 ? "disabled" : ""}>Anterior</button>
         <button class="btn btn-primary" onclick="proximo()">Próximo</button>
       </div>
     </div>
@@ -108,39 +116,53 @@ function renderLeitura() {
 function proximo() {
   const total = dados[civAtual].textos.length;
 
-  // Marca o texto atual como "concluído" ao avançar
-  const novo = clamp(indice + 1, 0, total);
-  indice = novo;
-  setProgresso(civAtual, indice);
+  // Marca o texto atual como concluído ao avançar (progresso nunca “anda pra trás”)
+  concluido = Math.max(concluido, indice + 1);
+  setProgresso(civAtual, concluido);
+
+  indice = clamp(indice + 1, 0, total);
 
   // micro transição suave
-  view.style.opacity = "0.6";
+  view.style.opacity = "0.65";
   setTimeout(() => {
     view.style.opacity = "1";
     renderLeitura();
   }, 120);
 }
 
+function anterior() {
+  if (indice <= 0) return;
+  indice = indice - 1;
+
+  view.style.opacity = "0.75";
+  setTimeout(() => {
+    view.style.opacity = "1";
+    renderLeitura();
+  }, 90);
+}
+
 function voltarHome() {
   civAtual = null;
   indice = 0;
+  concluido = 0;
   renderHome();
 }
 
 function finalizar() {
   const total = dados[civAtual].textos.length;
+  concluido = total;
   setProgresso(civAtual, total);
 
   soltarConfete();
 
   view.innerHTML = `
     <div class="card">
-      <h2>🎉 Parabéns!</h2>
+      <h2 style="margin:0;">🎉 Parabéns!</h2>
       <p class="muted" style="margin-top:6px;">
         Você concluiu <b>${dados[civAtual].titulo}</b>.
       </p>
 
-      <div class="actions" style="margin-top:16px;">
+      <div class="actions" style="grid-template-columns: 1fr 1fr; margin-top:16px;">
         <button class="btn btn-ghost" onclick="reiniciarCivilizacao()">Rever do início</button>
         <button class="btn btn-primary" onclick="voltarHome()">Voltar</button>
       </div>
@@ -150,11 +172,12 @@ function finalizar() {
 
 function reiniciarCivilizacao() {
   setProgresso(civAtual, 0);
+  concluido = 0;
   indice = 0;
   renderLeitura();
 }
 
-/* Confete simples (mantém leve pro iOS) */
+/* Confete leve */
 function soltarConfete() {
   const c = document.getElementById("confetti");
   const ctx = c.getContext("2d");
@@ -196,9 +219,16 @@ function soltarConfete() {
   tick();
 }
 
-/* Segurança básica: evita injeção se você colar textos com símbolos */
+/* Converte texto com \\n em parágrafos com margem de 8px e texto justificado */
+function toParagraphs(texto) {
+  const safe = escapeHtml(String(texto));
+  const parts = safe.split(/\n+/).map(p => p.trim()).filter(Boolean);
+  return parts.map(p => `<p>${p}</p>`).join("");
+}
+
+/* Segurança básica */
 function escapeHtml(str) {
-  return String(str)
+  return str
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
@@ -210,4 +240,5 @@ function escapeHtml(str) {
 window.iniciar = iniciar;
 window.voltarHome = voltarHome;
 window.proximo = proximo;
+window.anterior = anterior;
 window.reiniciarCivilizacao = reiniciarCivilizacao;
