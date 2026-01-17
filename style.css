@@ -21,7 +21,7 @@ body.home-bg::before {
   inset: 0;
   background: url("IMG_0773.jpeg") center / cover no-repeat;
   transform: scale(1.06); /* evita bordas ao aplicar blur */
-  filter: blur(8px) saturate(1.12) brightness(0.88);
+  filter: blur(4px) saturate(1.12) brightness(0.88);
   opacity: 0.75;
   z-index: -2;
   pointer-events: none;
