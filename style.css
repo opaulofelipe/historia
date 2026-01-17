@@ -8,6 +8,38 @@ body {
   background: radial-gradient(circle at top, #1e293b, #020617);
   color: #e5e7eb;
   min-height: 100vh;
+  position: relative;
+}
+
+/* ===== FUNDO COM IMAGEM (SÓ NA HOME) =====
+   - blur + brightness/saturate para harmonizar com glass
+   - scrim (overlay em gradiente) para legibilidade
+*/
+body.home-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("IMG_0773.jpeg") center / cover no-repeat;
+  transform: scale(1.06); /* evita bordas ao aplicar blur */
+  filter: blur(18px) saturate(1.08) brightness(0.70);
+  opacity: 0.55;
+  z-index: -2;
+  pointer-events: none;
+}
+
+body.home-bg::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  /* scrim: deixa o fundo bonito, mas garante contraste */
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.70) 0%,
+    rgba(2, 6, 23, 0.55) 45%,
+    rgba(2, 6, 23, 0.75) 100%
+  );
+  z-index: -1;
+  pointer-events: none;
 }
 
 #app {
@@ -33,11 +65,12 @@ body {
 /* Card base */
 .card {
   backdrop-filter: blur(18px);
-  background: rgba(255,255,255,0.08);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   padding: 20px;
   margin-bottom: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .clickable {
@@ -55,12 +88,10 @@ body {
   top: 0;
   z-index: 10;
 
-  /* opaco, legível */
-  background: #020617;
-  border: 1px solid rgba(255,255,255,0.12);
+  background: #020617; /* opaco */
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 14px;
 
-  /* “encaixe” dentro do card */
   margin: -10px -10px 14px -10px;
   padding: 10px 12px 12px 12px;
 }
@@ -72,12 +103,11 @@ body {
   column-gap: 12px;
 }
 
-/* Título da civilização */
 .civ-badge {
   height: 32px;
   padding: 0 12px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   font-size: 16px;
   font-weight: 650;
   display: inline-flex;
@@ -85,19 +115,17 @@ body {
   white-space: nowrap;
 }
 
-/* Texto X de Y (à esquerda) */
 .text-counter {
   font-size: 13px;
   opacity: 0.85;
   white-space: nowrap;
 }
 
-/* Percentual à direita */
 .percent-pill {
   height: 32px;
   padding: 0 12px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   font-size: 12px;
   display: inline-flex;
   align-items: center;
@@ -108,10 +136,10 @@ body {
 /* Barra de progresso */
 .progress {
   height: 8px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 999px;
   overflow: hidden;
-  margin-top: 10px; /* fica colada no header */
+  margin-top: 10px;
 }
 
 .progress span {
@@ -120,13 +148,18 @@ body {
   background: linear-gradient(90deg, #22c55e, #4ade80);
 }
 
+.muted {
+  opacity: 0.78;
+  font-size: 13px;
+}
+
 /* Texto */
 .text-body {
   margin-top: 14px;
   font-size: 15px;
   line-height: 1.65;
   text-align: justify;
-  color: rgba(229,231,235,0.94);
+  color: rgba(229, 231, 235, 0.94);
 }
 
 .text-body p {
@@ -151,16 +184,16 @@ body {
   padding: 12px;
   font-size: 14px;
   min-height: 44px;
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   color: #fff;
 }
 
 .btn-primary {
-  background: rgba(34,197,94,0.22);
+  background: rgba(34, 197, 94, 0.22);
 }
 
 .btn-ghost {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .btn[disabled] {
