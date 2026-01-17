@@ -1,4 +1,4 @@
-const CACHE = "historia-microtextos-v1";
+const CACHE = "historia-microtextos-v2";
 
 const ASSETS = [
   "./",
@@ -6,7 +6,8 @@ const ASSETS = [
   "./style.css",
   "./app.js",
   "./dados.json",
-  "./manifest.json"
+  "./manifest.json",
+  "./IMG_0773.jpeg"
 ];
 
 self.addEventListener("install", (e) => {
