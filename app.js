@@ -3,12 +3,15 @@ const view = document.getElementById("view");
 let dados = {};
 let civAtual = null;
 
-// indice = qual texto está sendo exibido agora
+// índice do texto atualmente exibido
 let indice = 0;
 
-// concluido = quantos textos já foram concluídos (progresso real salvo)
+// progresso real (quantos textos já foram concluídos)
 let concluido = 0;
 
+/* =========================
+   CARREGAMENTO DOS DADOS
+========================= */
 fetch("./dados.json")
   .then(r => r.json())
   .then(d => {
@@ -18,12 +21,17 @@ fetch("./dados.json")
   .catch(() => {
     view.innerHTML = `
       <div class="card">
-        <h2>Não foi possível carregar os dados 😕</h2>
-        <p class="muted">Verifique se o arquivo <b>dados.json</b> está na raiz do repositório.</p>
+        <h2>Erro ao carregar</h2>
+        <p class="muted">
+          Não foi possível carregar o arquivo <b>dados.json</b>.
+        </p>
       </div>
     `;
   });
 
+/* =========================
+   PROGRESSO
+========================= */
 function getProgresso(civ) {
   return Number(localStorage.getItem("prog_" + civ)) || 0;
 }
@@ -41,6 +49,9 @@ function calcPercent(done, total) {
   return Math.floor((clamp(done, 0, total) / total) * 100);
 }
 
+/* =========================
+   HOME
+========================= */
 function renderHome() {
   view.innerHTML = "";
 
@@ -52,7 +63,11 @@ function renderHome() {
     view.innerHTML += `
       <div class="card clickable" onclick="iniciar('${civ}')">
         <h2 style="margin:0 0 10px 0;">${dados[civ].titulo}</h2>
-        <div class="progress"><span style="width:${percent}%"></span></div>
+
+        <div class="progress">
+          <span style="width:${percent}%"></span>
+        </div>
+
         <div class="muted" style="margin-top:8px;">
           ${percent}% concluído • ${p}/${total} textos
         </div>
@@ -61,22 +76,27 @@ function renderHome() {
   });
 }
 
+/* =========================
+   INICIAR LEITURA
+========================= */
 function iniciar(civ) {
   civAtual = civ;
   const total = dados[civAtual].textos.length;
 
   concluido = clamp(getProgresso(civAtual), 0, total);
 
-  // ao abrir, mostra o "próximo não concluído"
+  // sempre abre no próximo texto não concluído
   indice = clamp(concluido, 0, total);
 
   renderLeitura();
 }
 
+/* =========================
+   TELA DE LEITURA
+========================= */
 function renderLeitura() {
   const total = dados[civAtual].textos.length;
 
-  // Se já concluiu tudo
   if (indice >= total) {
     finalizar();
     return;
@@ -87,18 +107,16 @@ function renderLeitura() {
 
   view.innerHTML = `
     <div class="card">
-      <div class="read-top">
-        <h2 class="read-title">${dados[civAtual].titulo}</h2>
 
-        <div class="pill-row">
-          <div class="pill">Texto ${indice + 1} de ${total}</div>
-          <div class="pill">${percent}%</div>
-        </div>
+      <div class="read-header">
+        <div class="civ-badge">${dados[civAtual].titulo}</div>
+        <div class="text-counter">Texto ${indice + 1} de ${total}</div>
+        <div class="percent-pill">${percent}%</div>
       </div>
 
-      <div class="progress"><span style="width:${percent}%"></span></div>
-
-      <div style="height:14px;"></div>
+      <div class="progress">
+        <span style="width:${percent}%"></span>
+      </div>
 
       <div class="text-body">
         ${toParagraphs(textoCru)}
@@ -106,39 +124,37 @@ function renderLeitura() {
 
       <div class="actions">
         <button class="btn btn-ghost" onclick="voltarHome()">Início</button>
-        <button class="btn" onclick="anterior()" ${indice === 0 ? "disabled" : ""}>Anterior</button>
-        <button class="btn btn-primary" onclick="proximo()">Próximo</button>
+        <button class="btn" onclick="anterior()" ${indice === 0 ? "disabled" : ""}>
+          Anterior
+        </button>
+        <button class="btn btn-primary" onclick="proximo()">
+          Próximo
+        </button>
       </div>
+
     </div>
   `;
 }
 
+/* =========================
+   NAVEGAÇÃO
+========================= */
 function proximo() {
   const total = dados[civAtual].textos.length;
 
-  // Marca o texto atual como concluído ao avançar (progresso nunca “anda pra trás”)
+  // progresso nunca anda para trás
   concluido = Math.max(concluido, indice + 1);
   setProgresso(civAtual, concluido);
 
   indice = clamp(indice + 1, 0, total);
 
-  // micro transição suave
-  view.style.opacity = "0.65";
-  setTimeout(() => {
-    view.style.opacity = "1";
-    renderLeitura();
-  }, 120);
+  renderLeitura();
 }
 
 function anterior() {
   if (indice <= 0) return;
-  indice = indice - 1;
-
-  view.style.opacity = "0.75";
-  setTimeout(() => {
-    view.style.opacity = "1";
-    renderLeitura();
-  }, 90);
+  indice -= 1;
+  renderLeitura();
 }
 
 function voltarHome() {
@@ -148,6 +164,9 @@ function voltarHome() {
   renderHome();
 }
 
+/* =========================
+   FINALIZAÇÃO
+========================= */
 function finalizar() {
   const total = dados[civAtual].textos.length;
   concluido = total;
@@ -163,8 +182,12 @@ function finalizar() {
       </p>
 
       <div class="actions" style="grid-template-columns: 1fr 1fr; margin-top:16px;">
-        <button class="btn btn-ghost" onclick="reiniciarCivilizacao()">Rever do início</button>
-        <button class="btn btn-primary" onclick="voltarHome()">Voltar</button>
+        <button class="btn btn-ghost" onclick="reiniciarCivilizacao()">
+          Rever do início
+        </button>
+        <button class="btn btn-primary" onclick="voltarHome()">
+          Voltar
+        </button>
       </div>
     </div>
   `;
@@ -177,10 +200,13 @@ function reiniciarCivilizacao() {
   renderLeitura();
 }
 
-/* Confete leve */
+/* =========================
+   CONFETE (LEVE)
+========================= */
 function soltarConfete() {
   const c = document.getElementById("confetti");
   const ctx = c.getContext("2d");
+
   c.width = innerWidth;
   c.height = innerHeight;
 
@@ -193,11 +219,11 @@ function soltarConfete() {
     rot: Math.random() * Math.PI
   }));
 
-  const start = Date.now();
-  const dur = 2800;
+  const inicio = Date.now();
+  const duracao = 2800;
 
-  const tick = () => {
-    const t = Date.now() - start;
+  function tick() {
+    const t = Date.now() - inicio;
     ctx.clearRect(0, 0, c.width, c.height);
 
     partes.forEach(p => {
@@ -212,21 +238,26 @@ function soltarConfete() {
       ctx.restore();
     });
 
-    if (t < dur) requestAnimationFrame(tick);
+    if (t < duracao) requestAnimationFrame(tick);
     else ctx.clearRect(0, 0, c.width, c.height);
-  };
+  }
 
   tick();
 }
 
-/* Converte texto com \\n em parágrafos com margem de 8px e texto justificado */
+/* =========================
+   TEXTO → PARÁGRAFOS
+========================= */
 function toParagraphs(texto) {
   const safe = escapeHtml(String(texto));
-  const parts = safe.split(/\n+/).map(p => p.trim()).filter(Boolean);
-  return parts.map(p => `<p>${p}</p>`).join("");
+  const partes = safe
+    .split(/\n+/)
+    .map(p => p.trim())
+    .filter(Boolean);
+
+  return partes.map(p => `<p>${p}</p>`).join("");
 }
 
-/* Segurança básica */
 function escapeHtml(str) {
   return str
     .replaceAll("&", "&amp;")
@@ -236,9 +267,11 @@ function escapeHtml(str) {
     .replaceAll("'", "&#039;");
 }
 
-/* expõe funções usadas no onclick inline */
+/* =========================
+   EXPOE FUNÇÕES
+========================= */
 window.iniciar = iniciar;
-window.voltarHome = voltarHome;
 window.proximo = proximo;
 window.anterior = anterior;
+window.voltarHome = voltarHome;
 window.reiniciarCivilizacao = reiniciarCivilizacao;
