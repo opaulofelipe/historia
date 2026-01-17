@@ -3,15 +3,12 @@ const view = document.getElementById("view");
 let dados = {};
 let civAtual = null;
 
-// índice do texto atualmente exibido
+// índice do texto exibido
 let indice = 0;
 
-// progresso real (quantos textos já foram concluídos)
+// progresso real (quantos textos concluídos)
 let concluido = 0;
 
-/* =========================
-   CARREGAMENTO DOS DADOS
-========================= */
 fetch("./dados.json")
   .then(r => r.json())
   .then(d => {
@@ -22,16 +19,11 @@ fetch("./dados.json")
     view.innerHTML = `
       <div class="card">
         <h2>Erro ao carregar</h2>
-        <p class="muted">
-          Não foi possível carregar o arquivo <b>dados.json</b>.
-        </p>
+        <p class="muted">Não foi possível carregar o arquivo <b>dados.json</b>.</p>
       </div>
     `;
   });
 
-/* =========================
-   PROGRESSO
-========================= */
 function getProgresso(civ) {
   return Number(localStorage.getItem("prog_" + civ)) || 0;
 }
@@ -49,9 +41,7 @@ function calcPercent(done, total) {
   return Math.floor((clamp(done, 0, total) / total) * 100);
 }
 
-/* =========================
-   HOME
-========================= */
+/* ===== HOME ===== */
 function renderHome() {
   view.innerHTML = "";
 
@@ -74,26 +64,23 @@ function renderHome() {
       </div>
     `;
   });
+
+  scrollToTop();
 }
 
-/* =========================
-   INICIAR LEITURA
-========================= */
+/* ===== INICIAR ===== */
 function iniciar(civ) {
   civAtual = civ;
   const total = dados[civAtual].textos.length;
 
   concluido = clamp(getProgresso(civAtual), 0, total);
-
-  // sempre abre no próximo texto não concluído
   indice = clamp(concluido, 0, total);
 
   renderLeitura();
+  scrollToTop();
 }
 
-/* =========================
-   TELA DE LEITURA
-========================= */
+/* ===== LEITURA ===== */
 function renderLeitura() {
   const total = dados[civAtual].textos.length;
 
@@ -108,14 +95,16 @@ function renderLeitura() {
   view.innerHTML = `
     <div class="card">
 
-      <div class="read-header">
-        <div class="civ-badge">${dados[civAtual].titulo}</div>
-        <div class="text-counter">Texto ${indice + 1} de ${total}</div>
-        <div class="percent-pill">${percent}%</div>
-      </div>
+      <div class="read-sticky">
+        <div class="read-header">
+          <div class="civ-badge">${escapeHtml(dados[civAtual].titulo)}</div>
+          <div class="text-counter">Texto ${indice + 1} de ${total}</div>
+          <div class="percent-pill">${percent}%</div>
+        </div>
 
-      <div class="progress">
-        <span style="width:${percent}%"></span>
+        <div class="progress">
+          <span style="width:${percent}%"></span>
+        </div>
       </div>
 
       <div class="text-body">
@@ -124,51 +113,48 @@ function renderLeitura() {
 
       <div class="actions">
         <button class="btn btn-ghost" onclick="voltarHome()">Início</button>
-        <button class="btn" onclick="anterior()" ${indice === 0 ? "disabled" : ""}>
-          Anterior
-        </button>
-        <button class="btn btn-primary" onclick="proximo()">
-          Próximo
-        </button>
+        <button class="btn" onclick="anterior()" ${indice === 0 ? "disabled" : ""}>Anterior</button>
+        <button class="btn btn-primary" onclick="proximo()">Próximo</button>
       </div>
 
     </div>
   `;
 }
 
-/* =========================
-   NAVEGAÇÃO
-========================= */
+/* ===== NAVEGAÇÃO ===== */
 function proximo() {
   const total = dados[civAtual].textos.length;
 
-  // progresso nunca anda para trás
   concluido = Math.max(concluido, indice + 1);
   setProgresso(civAtual, concluido);
 
   indice = clamp(indice + 1, 0, total);
 
   renderLeitura();
+  scrollToTop();
 }
 
 function anterior() {
   if (indice <= 0) return;
   indice -= 1;
+
   renderLeitura();
+  scrollToTop();
 }
 
 function voltarHome() {
   civAtual = null;
   indice = 0;
   concluido = 0;
+
   renderHome();
+  scrollToTop();
 }
 
-/* =========================
-   FINALIZAÇÃO
-========================= */
+/* ===== FINAL ===== */
 function finalizar() {
   const total = dados[civAtual].textos.length;
+
   concluido = total;
   setProgresso(civAtual, total);
 
@@ -178,31 +164,37 @@ function finalizar() {
     <div class="card">
       <h2 style="margin:0;">🎉 Parabéns!</h2>
       <p class="muted" style="margin-top:6px;">
-        Você concluiu <b>${dados[civAtual].titulo}</b>.
+        Você concluiu <b>${escapeHtml(dados[civAtual].titulo)}</b>.
       </p>
 
       <div class="actions" style="grid-template-columns: 1fr 1fr; margin-top:16px;">
-        <button class="btn btn-ghost" onclick="reiniciarCivilizacao()">
-          Rever do início
-        </button>
-        <button class="btn btn-primary" onclick="voltarHome()">
-          Voltar
-        </button>
+        <button class="btn btn-ghost" onclick="reiniciarCivilizacao()">Rever do início</button>
+        <button class="btn btn-primary" onclick="voltarHome()">Voltar</button>
       </div>
     </div>
   `;
+
+  scrollToTop();
 }
 
 function reiniciarCivilizacao() {
   setProgresso(civAtual, 0);
   concluido = 0;
   indice = 0;
+
   renderLeitura();
+  scrollToTop();
 }
 
-/* =========================
-   CONFETE (LEVE)
-========================= */
+/* ===== SCROLL TO TOP (iOS-friendly) ===== */
+function scrollToTop() {
+  // garantir que sobe no iOS e no browser normal
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+
+/* ===== CONFETE ===== */
 function soltarConfete() {
   const c = document.getElementById("confetti");
   const ctx = c.getContext("2d");
@@ -245,16 +237,10 @@ function soltarConfete() {
   tick();
 }
 
-/* =========================
-   TEXTO → PARÁGRAFOS
-========================= */
+/* ===== TEXTO -> PARÁGRAFOS ===== */
 function toParagraphs(texto) {
   const safe = escapeHtml(String(texto));
-  const partes = safe
-    .split(/\n+/)
-    .map(p => p.trim())
-    .filter(Boolean);
-
+  const partes = safe.split(/\n+/).map(p => p.trim()).filter(Boolean);
   return partes.map(p => `<p>${p}</p>`).join("");
 }
 
@@ -267,9 +253,7 @@ function escapeHtml(str) {
     .replaceAll("'", "&#039;");
 }
 
-/* =========================
-   EXPOE FUNÇÕES
-========================= */
+/* expõe funções */
 window.iniciar = iniciar;
 window.proximo = proximo;
 window.anterior = anterior;
