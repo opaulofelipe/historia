@@ -21,8 +21,14 @@ fetch("./dados.json")
     `;
   });
 
-function setHomeBackground(on) {
+function setHomeMode(on) {
   document.body.classList.toggle("home-bg", !!on);
+  document.body.classList.toggle("home-lock", !!on);
+}
+
+function scrollToTop() {
+  // rolagem sempre no container #app
+  appContainer.scrollTo({ top: 0, left: 0, behavior: "instant" });
 }
 
 function getProgresso(civ) {
@@ -42,14 +48,9 @@ function calcPercent(done, total) {
   return Math.floor((clamp(done, 0, total) / total) * 100);
 }
 
-/* ✅ volta ao topo do CONTAINER que rola (#app) */
-function scrollToTop() {
-  appContainer.scrollTo({ top: 0, left: 0, behavior: "instant" });
-}
-
 /* ===== HOME ===== */
 function renderHome() {
-  setHomeBackground(true);
+  setHomeMode(true);
   view.innerHTML = "";
 
   Object.keys(dados).forEach(civ => {
@@ -73,7 +74,7 @@ function renderHome() {
 
 /* ===== INICIAR ===== */
 function iniciar(civ) {
-  setHomeBackground(false);
+  setHomeMode(false);
 
   civAtual = civ;
   const total = dados[civAtual].textos.length;
@@ -119,9 +120,10 @@ function renderLeitura() {
   `;
 }
 
-/* ===== NAV ===== */
+/* ===== NAVEGAÇÃO ===== */
 function proximo() {
   const total = dados[civAtual].textos.length;
+
   concluido = Math.max(concluido, indice + 1);
   setProgresso(civAtual, concluido);
 
@@ -145,6 +147,7 @@ function voltarHome() {
   concluido = 0;
 
   renderHome();
+  scrollToTop();
 }
 
 /* ===== FINAL ===== */
@@ -157,13 +160,13 @@ function finalizar() {
     <div class="card">
       <h2 style="margin:0;">🎉 Parabéns!</h2>
       <p class="muted" style="margin-top:6px;">Você concluiu <b>${escapeHtml(dados[civAtual].titulo)}</b>.</p>
+
       <div class="actions" style="grid-template-columns:1fr 1fr; margin-top:16px;">
         <button class="btn btn-ghost" onclick="reiniciarCivilizacao()">Rever do início</button>
         <button class="btn btn-primary" onclick="voltarHome()">Voltar</button>
       </div>
     </div>
   `;
-
   scrollToTop();
 }
 
@@ -176,7 +179,7 @@ function reiniciarCivilizacao() {
   scrollToTop();
 }
 
-/* ===== helpers ===== */
+/* ===== TEXTO ===== */
 function toParagraphs(texto) {
   const safe = escapeHtml(String(texto));
   const parts = safe.split(/\n+/).map(p => p.trim()).filter(Boolean);
