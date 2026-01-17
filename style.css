@@ -7,8 +7,11 @@ body {
   margin: 0;
   background: radial-gradient(circle at top, #1e293b, #020617);
   color: #e5e7eb;
+
   min-height: 100vh;
-  position: relative;
+  overflow-y: hidden; /* 🔒 impede rolagem por padrão */
+}
+
 }
 
 /* ===== FUNDO COM IMAGEM (SÓ NA HOME) =====
@@ -136,7 +139,7 @@ body.home-bg::after {
 /* Barra de progresso */
 .progress {
   height: 8px;
-  background: rgba(255, 255, 255, 0.15);
+  background: #A294F9;
   border-radius: 999px;
   overflow: hidden;
   margin-top: 10px;
