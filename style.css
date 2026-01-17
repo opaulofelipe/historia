@@ -1,211 +1,165 @@
-* {
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
+* { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 
-/* ===== BODY SEM TRAVAR BACKGROUND ===== */
-body {
-  margin: 0;
-  min-height: 100vh;
+body{
+  margin:0;
+  min-height:100vh;
   background: radial-gradient(circle at top, #1e293b, #020617);
-  color: #e5e7eb;
-  position: relative;
+  color:#e5e7eb;
+  position:relative;
+  overflow:hidden; /* ✅ trava o BODY sempre. O scroll acontece no #app */
 }
 
-/* ===== FUNDO COM IMAGEM (APENAS HOME) ===== */
-body.home-bg::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: url("./IMG_0773.jpeg") center / cover no-repeat;
-  transform: scale(1.04);
+/* ===== Fundo com imagem (home) ===== */
+body.home-bg::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url("./IMG_0773.jpeg") center/cover no-repeat;
+  transform:scale(1.04);
   filter: blur(8px) saturate(1.12) brightness(0.88);
-  opacity: 0.75;
-  z-index: -2;
-  pointer-events: none;
+  opacity:0.75;
+  z-index:-2;
+  pointer-events:none;
 }
-
-body.home-bg::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(
+body.home-bg::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:linear-gradient(
     180deg,
-    rgba(2, 6, 23, 0.65) 0%,
-    rgba(2, 6, 23, 0.55) 45%,
-    rgba(2, 6, 23, 0.75) 100%
+    rgba(2,6,23,0.60) 0%,
+    rgba(2,6,23,0.52) 45%,
+    rgba(2,6,23,0.72) 100%
   );
-  z-index: -1;
-  pointer-events: none;
+  z-index:-1;
+  pointer-events:none;
 }
 
-/* ===== CONTAINER PRINCIPAL ===== */
-#app {
-  max-width: 420px;
-  margin: auto;
-  padding: 18px 20px 20px;
-
-  min-height: 100vh;
-
-  /* CONTROLE DE SCROLL AQUI */
-  overflow-y: auto;
+/* ===== Container que rola ===== */
+#app{
+  max-width:420px;
+  margin:auto;
+  padding:18px 20px 20px;
+  height:100vh;              /* ✅ define viewport do scroll */
+  overflow-y:auto;           /* ✅ scroll só aqui */
+  -webkit-overflow-scrolling: touch;
 }
 
-/* HOME NÃO ROLA */
-body.home-bg #app {
-  overflow-y: hidden;
+/* ✅ Home SEM rolagem (fixa) */
+body.home-bg #app{
+  overflow-y:hidden;
 }
 
-/* ===== TOP BAR ===== */
-.topbar {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 14px;
-}
+/* Topbar */
+.topbar{ display:flex; justify-content:flex-start; margin-bottom:14px; }
+.app-title{ margin:0; font-size:22px; font-weight:700; letter-spacing:.2px; }
 
-.app-title {
-  margin: 0;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
-/* ===== CARD ===== */
-.card {
+/* Cards */
+.card{
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
-  padding: 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
 }
+.clickable{ cursor:pointer; transition:transform .18s ease; }
+.clickable:active{ transform:scale(0.995); }
 
-.clickable {
-  cursor: pointer;
-  transition: transform 0.18s ease;
-}
-
-.clickable:active {
-  transform: scale(0.995);
-}
-
-/* ===== HEADER + PROGRESSO STICKY ===== */
-.read-sticky {
+/* ===== Sticky header + progresso ===== */
+.read-sticky{
   position: sticky;
-  top: 0;
+  top: 0;                   /* ✅ sticky agora funciona porque #app rola */
   z-index: 10;
 
-  background: #020617;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 14px;
+  background:#020617;       /* opaco */
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:14px;
 
-  margin: -10px -10px 14px -10px;
-  padding: 10px 12px 12px;
+  margin:-10px -10px 14px -10px;
+  padding:10px 12px 12px;
 }
 
-.read-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  column-gap: 12px;
+.read-header{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  column-gap:12px;
 }
 
-.civ-badge {
-  height: 32px;
-  padding: 0 12px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.12);
-  font-size: 16px;
-  font-weight: 650;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
+.civ-badge{
+  height:32px;
+  padding:0 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.12);
+  font-size:16px;
+  font-weight:650;
+  display:inline-flex;
+  align-items:center;
+  white-space:nowrap;
 }
 
-.text-counter {
-  font-size: 13px;
-  opacity: 0.85;
-  white-space: nowrap;
+.text-counter{ font-size:13px; opacity:0.85; white-space:nowrap; }
+
+.percent-pill{
+  height:32px;
+  padding:0 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.12);
+  font-size:12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
 }
 
-.percent-pill {
-  height: 32px;
-  padding: 0 12px;
-  border-radius: 999px;
-  background: #CBBADD;
-  font-size: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
+/* Progress */
+.progress{
+  height:8px;
+  background:rgba(255,255,255,0.15);
+  border-radius:999px;
+  overflow:hidden;
+  margin-top:10px;
+}
+.progress span{
+  display:block;
+  height:100%;
+  background:linear-gradient(90deg, #22c55e, #4ade80);
 }
 
-/* ===== PROGRESS BAR ===== */
-.progress {
-  height: 8px;
-  background: rgba(255,255,255,0.15);
-  border-radius: 999px;
-  overflow: hidden;
-  margin-top: 10px;
-}
+.muted{ opacity:0.78; font-size:13px; }
 
-.progress span {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, #22c55e, #4ade80);
+/* Text */
+.text-body{
+  margin-top:14px;
+  font-size:15px;
+  line-height:1.65;
+  text-align:justify;
+  color:rgba(229,231,235,0.94);
 }
+.text-body p{ margin:0 0 8px 0; }
+.text-body p:last-child{ margin-bottom:0; }
 
-/* ===== TEXTO ===== */
-.text-body {
-  margin-top: 14px;
-  font-size: 15px;
-  line-height: 1.65;
-  text-align: justify;
-  color: rgba(229,231,235,0.94);
+/* Buttons */
+.actions{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+  margin-top:16px;
 }
+.btn{
+  border:none;
+  border-radius:14px;
+  padding:12px;
+  font-size:14px;
+  min-height:44px;
+  background:rgba(255,255,255,0.12);
+  color:#fff;
+}
+.btn-primary{ background:rgba(34,197,94,0.22); }
+.btn-ghost{ background:rgba(255,255,255,0.08); }
+.btn[disabled]{ opacity:0.45; }
 
-.text-body p {
-  margin: 0 0 8px 0;
-}
-
-.text-body p:last-child {
-  margin-bottom: 0;
-}
-
-/* ===== BOTÕES ===== */
-.actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.btn {
-  border: none;
-  border-radius: 14px;
-  padding: 12px;
-  font-size: 14px;
-  min-height: 44px;
-  background: rgba(255,255,255,0.12);
-  color: #fff;
-}
-
-.btn-primary {
-  background: rgba(34,197,94,0.22);
-}
-
-.btn-ghost {
-  background: rgba(255,255,255,0.08);
-}
-
-.btn[disabled] {
-  opacity: 0.45;
-}
-
-/* ===== CONFETTI ===== */
-canvas#confetti {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-}
+/* Confetti */
+canvas#confetti{ position:fixed; inset:0; pointer-events:none; }
