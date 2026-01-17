@@ -6,7 +6,7 @@ body{
   background: radial-gradient(circle at top, #1e293b, #020617);
   color:#e5e7eb;
   position:relative;
-  overflow:hidden; /* ✅ trava o BODY sempre. O scroll acontece no #app */
+  overflow:hidden; /* body nunca rola */
 }
 
 /* ===== Fundo com imagem (home) ===== */
@@ -37,18 +37,17 @@ body.home-bg::after{
 
 /* ===== Container que rola ===== */
 #app{
-  max-width:420px;
-  margin:auto;
-  padding:18px 20px 20px;
-  height:100vh;              /* ✅ define viewport do scroll */
-  overflow-y:auto;           /* ✅ scroll só aqui */
+  width: 100%;
+  max-width: 420px;      /* mobile */
+  margin: 0 auto;
+  padding: 18px 20px 20px;
+  height: 100vh;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-/* ✅ Home SEM rolagem (fixa) */
-body.home-bg #app{
-  overflow-y:hidden;
-}
+/* Home sem rolagem */
+body.home-bg #app{ overflow-y: hidden; }
 
 /* Topbar */
 .topbar{ display:flex; justify-content:flex-start; margin-bottom:14px; }
@@ -64,16 +63,37 @@ body.home-bg #app{
   margin-bottom:16px;
   box-shadow:0 10px 30px rgba(0,0,0,0.35);
 }
+
 .clickable{ cursor:pointer; transition:transform .18s ease; }
 .clickable:active{ transform:scale(0.995); }
+
+.muted{ opacity:0.78; font-size:13px; }
+
+/* ===== Home grid wrapper (responsivo sem mexer no HTML) ===== */
+#view{
+  display: block;
+}
+
+/* Quando estamos na home, vamos transformar o conteúdo em grid:
+   - funciona porque na home o #view tem vários cards diretos
+   - na leitura, #view tem só 1 card -> não muda nada */
+body.home-bg #view{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+body.home-bg #view .card{
+  margin-bottom: 0; /* gap do grid substitui */
+}
 
 /* ===== Sticky header + progresso ===== */
 .read-sticky{
   position: sticky;
-  top: 0;                   /* ✅ sticky agora funciona porque #app rola */
+  top: 0;
   z-index: 10;
 
-  background:#020617;       /* opaco */
+  background:#020617;
   border:1px solid rgba(255,255,255,0.12);
   border-radius:14px;
 
@@ -128,8 +148,6 @@ body.home-bg #app{
   background:linear-gradient(90deg, #22c55e, #4ade80);
 }
 
-.muted{ opacity:0.78; font-size:13px; }
-
 /* Text */
 .text-body{
   margin-top:14px;
@@ -163,3 +181,51 @@ body.home-bg #app{
 
 /* Confetti */
 canvas#confetti{ position:fixed; inset:0; pointer-events:none; }
+
+/* =========================
+   RESPONSIVO: TABLET
+========================= */
+@media (min-width: 768px){
+  #app{
+    max-width: 860px;
+    padding: 26px 28px 28px;
+  }
+
+  .app-title{
+    font-size: 26px;
+  }
+
+  /* Home em 2 colunas no tablet */
+  body.home-bg #view{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  /* leitura: melhorar conforto de leitura (largura ideal) */
+  body:not(.home-bg) #view .card{
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* =========================
+   RESPONSIVO: DESKTOP
+========================= */
+@media (min-width: 1100px){
+  #app{
+    max-width: 1100px;
+    padding: 30px 34px 34px;
+  }
+
+  /* Home em 3 colunas no desktop */
+  body.home-bg #view{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  /* leitura: mantém coluna de texto confortável */
+  body:not(.home-bg) #view .card{
+    max-width: 760px;
+  }
+}
