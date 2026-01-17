@@ -1,105 +1,81 @@
+/* Reset básico */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  margin: 0;
-  background: radial-gradient(circle at top, #1e293b, #020617);
-  color: #e5e7eb;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
   min-height: 100vh;
-}
-
-#app {
-  max-width: 420px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
 }
 
-header h1 {
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #333;
   text-align: center;
-  font-weight: 600;
-  opacity: 0.9;
 }
 
-.card {
-  backdrop-filter: blur(18px);
-  background: rgba(255,255,255,0.08);
-  border-radius: 18px;
+/* Container civilizações */
+#civilizations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card de civilização */
+.civilization-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
   padding: 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
-.progress {
-  height: 8px;
-  background: rgba(255,255,255,0.15);
-  border-radius: 999px;
-  overflow: hidden;
-  margin-top: 10px;
+.civilization-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.progress span {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, #22c55e, #4ade80);
+.civilization-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #111;
 }
 
-.answers button {
+.progress-bar-container {
+  background: rgba(255,255,255,0.3);
+  border-radius: 8px;
+  height: 12px;
   width: 100%;
   margin-top: 10px;
-  padding: 14px;
-  border-radius: 14px;
-  border: none;
-  background: rgba(255,255,255,0.12);
-  color: #fff;
-  font-size: 15px;
 }
 
-.answers button.correct {
-  background: #16a34a;
+.progress-bar {
+  height: 100%;
+  border-radius: 8px;
+  background: #4caf50;
+  width: 0%;
 }
 
-.answers button.wrong {
-  background: #dc2626;
-}
-
-/* 🔥 POPUP CORRIGIDO */
-.popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: auto;
-  z-index: 999;
-}
-
-.popup.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.popup-card {
-  background: rgba(15,23,42,0.95);
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  max-width: 280px;
-}
-
-.popup-card button {
-  margin-top: 20px;
-  padding: 12px 20px;
-  border-radius: 12px;
-  border: none;
-  font-size: 15px;
-}
-
-canvas#confetti {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
+/* Responsivo */
+@media (max-width: 600px) {
+  .civilization-card {
+    padding: 15px;
+  }
 }
