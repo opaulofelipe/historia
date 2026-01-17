@@ -2,12 +2,8 @@ const view = document.getElementById("view");
 
 let dados = {};
 let civAtual = null;
-
-// índice do texto exibido
-let indice = 0;
-
-// progresso real (quantos textos concluídos)
-let concluido = 0;
+let indice = 0;      // texto exibido
+let concluido = 0;   // progresso real
 
 fetch("./dados.json")
   .then(r => r.json())
@@ -41,10 +37,23 @@ function calcPercent(done, total) {
   return Math.floor((clamp(done, 0, total) / total) * 100);
 }
 
+/* ===== fundo da home ===== */
+function setHomeBackground(isHome) {
+  document.body.classList.toggle("home-bg", !!isHome);
+}
+
+/* ===== scroll topo ===== */
+function scrollToTop() {
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+
 /* ===== HOME ===== */
 function renderHome() {
-  view.innerHTML = "";
+  setHomeBackground(true);
 
+  view.innerHTML = "";
   Object.keys(dados).forEach(civ => {
     const total = dados[civ].textos.length;
     const p = clamp(getProgresso(civ), 0, total);
@@ -70,6 +79,8 @@ function renderHome() {
 
 /* ===== INICIAR ===== */
 function iniciar(civ) {
+  setHomeBackground(false);
+
   civAtual = civ;
   const total = dados[civAtual].textos.length;
 
@@ -184,14 +195,6 @@ function reiniciarCivilizacao() {
 
   renderLeitura();
   scrollToTop();
-}
-
-/* ===== SCROLL TO TOP (iOS-friendly) ===== */
-function scrollToTop() {
-  // garantir que sobe no iOS e no browser normal
-  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-  document.documentElement.scrollTop = 0;
-  document.body.scrollTop = 0;
 }
 
 /* ===== CONFETE ===== */
