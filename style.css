@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 body {
@@ -19,6 +19,7 @@ body {
 header h1 {
   text-align: center;
   font-weight: 600;
+  opacity: 0.9;
 }
 
 .card {
@@ -29,16 +30,11 @@ header h1 {
   margin-bottom: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
   cursor: pointer;
-  transition: transform .2s, box-shadow .2s;
-}
-
-.card:hover {
-  transform: translateY(-2px);
 }
 
 .progress {
   height: 8px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.15);
   border-radius: 999px;
   overflow: hidden;
   margin-top: 10px;
@@ -63,43 +59,35 @@ header h1 {
 
 .answers button.correct {
   background: #16a34a;
-  animation: pulse 0.4s;
 }
 
 .answers button.wrong {
   background: #dc2626;
-  animation: shake 0.3s;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-@keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-4px); }
-  50% { transform: translateX(4px); }
-  100% { transform: translateX(0); }
-}
-
-#popup {
+/* 🔥 POPUP CORRIGIDO */
+.popup {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: auto;
+  z-index: 999;
 }
 
-.hidden { display: none; }
+.popup.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
 .popup-card {
-  background: rgba(15,23,42,0.9);
+  background: rgba(15,23,42,0.95);
   padding: 30px;
   border-radius: 20px;
   text-align: center;
+  max-width: 280px;
 }
 
 .popup-card button {
@@ -107,6 +95,7 @@ header h1 {
   padding: 12px 20px;
   border-radius: 12px;
   border: none;
+  font-size: 15px;
 }
 
 canvas#confetti {
