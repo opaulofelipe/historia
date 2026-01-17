@@ -50,9 +50,10 @@ body {
 }
 
 /* ===== HEADER FIXO (STICKY) AO ROLAR ===== */
+
 .read-header {
   position: sticky;
-  top: 0;                   /* gruda no topo do card */
+  top: 0;
   z-index: 5;
 
   display: grid;
@@ -60,14 +61,13 @@ body {
   align-items: center;
   column-gap: 12px;
 
-  /* “sheet” glass próprio, pra não misturar com o texto ao rolar */
-  padding: 10px 10px;
-  margin: -10px -10px 12px -10px; /* expande um pouco dentro do card */
+  padding: 10px 12px;
+  margin: -10px -10px 12px -10px;
   border-radius: 14px;
 
-  backdrop-filter: blur(22px);
-  background: rgba(2, 6, 23, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  /* 🔴 FUNDO OPACO (sem transparência) */
+  background: #020617; /* mesmo tom do app */
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
 /* Título da civilização */
