@@ -1,167 +1,18 @@
 {
-  "mesopotamia": {
-    "titulo": "Mesopotâmia",
-    "perguntas": [
-      {
-        "pergunta": "O que significa o termo Mesopotâmia?",
-        "opcoes": ["Terra entre rios", "Terra dos faraós", "Berço do Ocidente", "Cidade dos deuses"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Quais rios delimitavam a região da Mesopotâmia?",
-        "opcoes": ["Tigre e Eufrates", "Nilo e Jordão", "Indo e Ganges", "Danúbio e Reno"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual povo é considerado o fundador da civilização mesopotâmica?",
-        "opcoes": ["Sumérios", "Assírios", "Babilônios", "Persas"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual foi a primeira forma de escrita conhecida da história humana?",
-        "opcoes": ["Cuneiforme", "Hieroglífica", "Alfabética", "Ideográfica chinesa"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Em que material os sumérios registravam a escrita cuneiforme?",
-        "opcoes": ["Tábuas de argila", "Papiro", "Pedra calcária", "Pergaminho"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual cidade é considerada uma das mais antigas do mundo?",
-        "opcoes": ["Uruk", "Atenas", "Roma", "Jerusalém"],
-        "correta": 0
-      },
-      {
-        "pergunta": "O que eram as cidades-estado mesopotâmicas?",
-        "opcoes": ["Cidades politicamente independentes", "Províncias imperiais", "Aldeias agrícolas", "Colônias estrangeiras"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Quem exercia o poder político nas cidades-estado sumérias?",
-        "opcoes": ["Rei-sacerdote", "Assembleia popular", "Imperador", "Senado"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual construção religiosa era típica da Mesopotâmia?",
-        "opcoes": ["Zigurate", "Pirâmide", "Templo dórico", "Basílica"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual era a base da economia mesopotâmica?",
-        "opcoes": ["Agricultura irrigada", "Mineração de ouro", "Comércio marítimo", "Caça e coleta"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Por que a irrigação era fundamental na Mesopotâmia?",
-        "opcoes": ["Devido às cheias irregulares dos rios", "Por causa do clima frio", "Pela escassez de rios", "Pela presença de florestas densas"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual povo criou o primeiro grande código de leis escrito?",
-        "opcoes": ["Babilônios", "Sumérios", "Assírios", "Fenícios"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Como ficou conhecido esse conjunto de leis?",
-        "opcoes": ["Código de Hamurábi", "Leis das Doze Tábuas", "Código de Manu", "Lei Mosaica"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual princípio jurídico marcou o Código de Hamurábi?",
-        "opcoes": ["Lei de talião", "Presunção de inocência", "Igualdade jurídica", "Liberdade religiosa"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Quem foi Hamurábi?",
-        "opcoes": ["Rei da Babilônia", "Sacerdote sumério", "General assírio", "Imperador persa"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual povo ficou conhecido por seu militarismo e violência?",
-        "opcoes": ["Assírios", "Caldeus", "Sumérios", "Hebreus"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual cidade foi a capital do Império Assírio?",
-        "opcoes": ["Nínive", "Ur", "Babilônia", "Susa"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Quem destruiu o Império Assírio?",
-        "opcoes": ["Caldeus e medos", "Persas", "Sumérios", "Egípcios"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual povo reconstruiu Babilônia após os assírios?",
-        "opcoes": ["Caldeus", "Persas", "Fenícios", "Hititas"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual rei caldeu destacou-se por obras monumentais?",
-        "opcoes": ["Nabucodonosor II", "Hamurábi", "Sargão I", "Assurbanipal"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual construção é associada a Nabucodonosor II?",
-        "opcoes": ["Jardins Suspensos da Babilônia", "Coliseu", "Pirâmide de Quéops", "Partenon"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual era a religião predominante na Mesopotâmia?",
-        "opcoes": ["Politeísta", "Monoteísta", "Ateísta", "Dualista"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Como os mesopotâmicos viam seus deuses?",
-        "opcoes": ["Antropomórficos e ligados à natureza", "Abstratos e universais", "Inexistentes", "Puramente espirituais"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual obra literária é considerada a mais antiga da humanidade?",
-        "opcoes": ["Epopeia de Gilgamesh", "Ilíada", "Odisseia", "Bíblia"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual tema central aparece na Epopeia de Gilgamesh?",
-        "opcoes": ["Busca pela imortalidade", "Conquista territorial", "Criação do mundo", "Vida após a morte cristã"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual avanço matemático surgiu na Mesopotâmia?",
-        "opcoes": ["Sistema sexagesimal", "Sistema decimal", "Sistema binário", "Álgebra moderna"],
-        "correta": 0
-      },
-      {
-        "pergunta": "O sistema sexagesimal influencia até hoje qual medida?",
-        "opcoes": ["Tempo", "Peso", "Temperatura", "Comprimento"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual ciência foi desenvolvida ligada à observação dos astros?",
-        "opcoes": ["Astronomia", "Biologia", "Geologia", "Química"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Por que a Mesopotâmia é chamada de berço da civilização?",
-        "opcoes": ["Por reunir cidades, leis, escrita e Estado", "Por ser a mais antiga região habitada", "Por ter sido a maior em território", "Por ter sido a mais rica em ouro"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Quem conquistou a Mesopotâmia no século VI a.C.?",
-        "opcoes": ["Persas", "Gregos", "Romanos", "Fenícios"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual rei persa ficou conhecido por respeitar culturas locais?",
-        "opcoes": ["Ciro, o Grande", "Dario I", "Xerxes", "Cambises"],
-        "correta": 0
-      },
-      {
-        "pergunta": "Qual foi uma herança duradoura da Mesopotâmia para a humanidade?",
-        "opcoes": ["Escrita, leis e organização urbana", "Democracia direta", "Cristianismo", "Feudalismo"],
-        "correta": 0
-      }
-    ]
-  }
+  "civilizations": [
+    {
+      "id": "mesopotamia",
+      "name": "Mesopotâmia",
+      "pages": [
+        {
+          "title": "Origens da Mesopotâmia",
+          "text": "A Mesopotâmia, conhecida como o berço da civilização, localiza-se entre os rios Tigre e Eufrates. As primeiras cidades surgiram por volta de 4000 a.C., com desenvolvimento de agricultura irrigada, escrita cuneiforme e organização política complexa. Sua história é marcada por cidades-estado como Ur, Uruk e Lagash, e a construção de templos monumentais, os zigurates."
+        },
+        {
+          "title": "Sociedade e Cultura",
+          "text": "A sociedade mesopotâmica era hierarquizada, com reis, sacerdotes, comerciantes e agricultores. Criaram leis codificadas, como o Código de Hamurabi. Desenvolveram avanços em matemática, astronomia e arquitetura. As religiões eram politeístas, com deuses associados a elementos naturais. A escrita cuneiforme foi usada para registros administrativos, religiosos e literários."
+        }
+      ]
+    }
+  ]
 }
