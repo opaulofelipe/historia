@@ -3,28 +3,23 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+/* ===== BODY SEM TRAVAR BACKGROUND ===== */
 body {
   margin: 0;
+  min-height: 100vh;
   background: radial-gradient(circle at top, #1e293b, #020617);
   color: #e5e7eb;
-
-  min-height: 100vh;
-  overflow-y: hidden; /* 🔒 impede rolagem por padrão */
+  position: relative;
 }
 
-}
-
-/* ===== FUNDO COM IMAGEM (SÓ NA HOME) =====
-   - blur + brightness/saturate para harmonizar com glass
-   - scrim (overlay em gradiente) para legibilidade
-*/
+/* ===== FUNDO COM IMAGEM (APENAS HOME) ===== */
 body.home-bg::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("IMG_0773.jpeg") center / cover no-repeat;
-  transform: scale(1.06); /* evita bordas ao aplicar blur */
-  filter: blur(2px) saturate(1.12) brightness(0.88);
+  background: url("./IMG_0773.jpeg") center / cover no-repeat;
+  transform: scale(1.04);
+  filter: blur(8px) saturate(1.12) brightness(0.88);
   opacity: 0.75;
   z-index: -2;
   pointer-events: none;
@@ -34,10 +29,9 @@ body.home-bg::after {
   content: "";
   position: fixed;
   inset: 0;
-  /* scrim: deixa o fundo bonito, mas garante contraste */
   background: linear-gradient(
     180deg,
-    rgba(2, 6, 23, 0.70) 0%,
+    rgba(2, 6, 23, 0.65) 0%,
     rgba(2, 6, 23, 0.55) 45%,
     rgba(2, 6, 23, 0.75) 100%
   );
@@ -45,13 +39,24 @@ body.home-bg::after {
   pointer-events: none;
 }
 
+/* ===== CONTAINER PRINCIPAL ===== */
 #app {
   max-width: 420px;
   margin: auto;
   padding: 18px 20px 20px;
+
+  min-height: 100vh;
+
+  /* CONTROLE DE SCROLL AQUI */
+  overflow-y: auto;
 }
 
-/* Top bar */
+/* HOME NÃO ROLA */
+body.home-bg #app {
+  overflow-y: hidden;
+}
+
+/* ===== TOP BAR ===== */
 .topbar {
   display: flex;
   justify-content: flex-start;
@@ -65,7 +70,7 @@ body.home-bg::after {
   letter-spacing: 0.2px;
 }
 
-/* Card base */
+/* ===== CARD ===== */
 .card {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -73,7 +78,7 @@ body.home-bg::after {
   border-radius: 18px;
   padding: 20px;
   margin-bottom: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
 .clickable {
@@ -85,18 +90,18 @@ body.home-bg::after {
   transform: scale(0.995);
 }
 
-/* ===== HEADER + PROGRESSO STICKY (OPACO) ===== */
+/* ===== HEADER + PROGRESSO STICKY ===== */
 .read-sticky {
   position: sticky;
   top: 0;
   z-index: 10;
 
-  background: #020617; /* opaco */
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #020617;
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 14px;
 
   margin: -10px -10px 14px -10px;
-  padding: 10px 12px 12px 12px;
+  padding: 10px 12px 12px;
 }
 
 .read-header {
@@ -110,7 +115,7 @@ body.home-bg::after {
   height: 32px;
   padding: 0 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.12);
   font-size: 16px;
   font-weight: 650;
   display: inline-flex;
@@ -128,7 +133,7 @@ body.home-bg::after {
   height: 32px;
   padding: 0 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
+  background: #CBBADD;
   font-size: 12px;
   display: inline-flex;
   align-items: center;
@@ -136,10 +141,10 @@ body.home-bg::after {
   white-space: nowrap;
 }
 
-/* Barra de progresso */
+/* ===== PROGRESS BAR ===== */
 .progress {
   height: 8px;
-  background: #A294F9;
+  background: rgba(255,255,255,0.15);
   border-radius: 999px;
   overflow: hidden;
   margin-top: 10px;
@@ -151,18 +156,13 @@ body.home-bg::after {
   background: linear-gradient(90deg, #22c55e, #4ade80);
 }
 
-.muted {
-  opacity: 0.78;
-  font-size: 13px;
-}
-
-/* Texto */
+/* ===== TEXTO ===== */
 .text-body {
   margin-top: 14px;
   font-size: 15px;
   line-height: 1.65;
   text-align: justify;
-  color: rgba(229, 231, 235, 0.94);
+  color: rgba(229,231,235,0.94);
 }
 
 .text-body p {
@@ -173,7 +173,7 @@ body.home-bg::after {
   margin-bottom: 0;
 }
 
-/* Ações */
+/* ===== BOTÕES ===== */
 .actions {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -187,30 +187,25 @@ body.home-bg::after {
   padding: 12px;
   font-size: 14px;
   min-height: 44px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.12);
   color: #fff;
 }
 
 .btn-primary {
-  background: rgba(34, 197, 94, 0.22);
+  background: rgba(34,197,94,0.22);
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
 }
 
 .btn[disabled] {
   opacity: 0.45;
 }
 
-/* Confetti */
+/* ===== CONFETTI ===== */
 canvas#confetti {
   position: fixed;
   inset: 0;
   pointer-events: none;
-}
-
-/* Quando NÃO estiver na home, permite rolar */
-body:not(.home-bg) {
-  overflow-y: auto;
 }
