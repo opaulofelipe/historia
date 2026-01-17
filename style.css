@@ -33,11 +33,11 @@ body {
 /* Card base */
 .card {
   backdrop-filter: blur(18px);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
   border-radius: 18px;
   padding: 20px;
   margin-bottom: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
 .clickable {
@@ -49,25 +49,27 @@ body {
   transform: scale(0.995);
 }
 
-/* ===== HEADER FIXO (STICKY) AO ROLAR ===== */
-
-.read-header {
+/* ===== HEADER + PROGRESSO STICKY (OPACO) ===== */
+.read-sticky {
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 10;
 
+  /* opaco, legível */
+  background: #020617;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+
+  /* “encaixe” dentro do card */
+  margin: -10px -10px 14px -10px;
+  padding: 10px 12px 12px 12px;
+}
+
+.read-header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   column-gap: 12px;
-
-  padding: 10px 12px;
-  margin: -10px -10px 12px -10px;
-  border-radius: 14px;
-
-  /* 🔴 FUNDO OPACO (sem transparência) */
-  background: #020617; /* mesmo tom do app */
-  border: 1px solid rgba(255,255,255,0.12);
 }
 
 /* Título da civilização */
@@ -75,7 +77,7 @@ body {
   height: 32px;
   padding: 0 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.12);
   font-size: 16px;
   font-weight: 650;
   display: inline-flex;
@@ -83,7 +85,7 @@ body {
   white-space: nowrap;
 }
 
-/* Texto X de Y (à esquerda, após o título) */
+/* Texto X de Y (à esquerda) */
 .text-counter {
   font-size: 13px;
   opacity: 0.85;
@@ -95,7 +97,7 @@ body {
   height: 32px;
   padding: 0 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.12);
   font-size: 12px;
   display: inline-flex;
   align-items: center;
@@ -106,9 +108,10 @@ body {
 /* Barra de progresso */
 .progress {
   height: 8px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.15);
   border-radius: 999px;
   overflow: hidden;
+  margin-top: 10px; /* fica colada no header */
 }
 
 .progress span {
@@ -123,7 +126,7 @@ body {
   font-size: 15px;
   line-height: 1.65;
   text-align: justify;
-  color: rgba(229, 231, 235, 0.94);
+  color: rgba(229,231,235,0.94);
 }
 
 .text-body p {
@@ -148,16 +151,16 @@ body {
   padding: 12px;
   font-size: 14px;
   min-height: 44px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.12);
   color: #fff;
 }
 
 .btn-primary {
-  background: rgba(34, 197, 94, 0.22);
+  background: rgba(34,197,94,0.22);
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
 }
 
 .btn[disabled] {
