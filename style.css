@@ -209,3 +209,8 @@ canvas#confetti {
   inset: 0;
   pointer-events: none;
 }
+
+/* Quando NÃO estiver na home, permite rolar */
+body:not(.home-bg) {
+  overflow-y: auto;
+}
