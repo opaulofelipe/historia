@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>História</title>
+
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
   <meta name="theme-color" content="#0f172a" />
 </head>
 <body>
+
   <div id="app">
     <header>
       <h1>História</h1>
@@ -17,11 +19,12 @@
     <main id="view"></main>
   </div>
 
-  <div id="popup" class="hidden">
+  <!-- POPUP -->
+  <div id="popup" class="popup hidden">
     <div class="popup-card">
       <h2>Que pena 😕</h2>
       <p>Você errou. Tente novamente.</p>
-      <button onclick="location.reload()">Voltar ao início</button>
+      <button id="btn-voltar">Voltar ao início</button>
     </div>
   </div>
 
@@ -30,7 +33,7 @@
   <script src="app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
+      navigator.serviceWorker.register('./sw.js');
     }
   </script>
 </body>
