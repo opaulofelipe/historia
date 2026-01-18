@@ -1,4 +1,4 @@
-const CACHE = "historia-quiz-v1";
+const CACHE = "historia-quiz-v2";
 
 const ASSETS = [
   "./",
