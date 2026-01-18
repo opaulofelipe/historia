@@ -267,6 +267,68 @@
         ],
         "correta": 1
       },
+      
+      {
+  "pergunta": "Como era chamado o governante-rei de uma cidade-estado mesopotâmica?",
+  "opcoes": [
+    "Faraó",
+    "Lugal",
+    "Basileu",
+    "Cônsul"
+  ],
+  "correta": 1
+},
+{
+  "pergunta": "Qual título era dado ao governante-sacerdote nas cidades mesopotâmicas?",
+  "opcoes": [
+    "Vizir",
+    "Patesi",
+    "Sumo sacerdote",
+    "Nômade"
+  ],
+  "correta": 1
+},
+{
+  "pergunta": "Qual deus sumério era associado ao céu e à autoridade suprema?",
+  "opcoes": [
+    "Enki",
+    "Anu",
+    "Ishtar",
+    "Nergal"
+  ],
+  "correta": 1
+},
+{
+  "pergunta": "Qual divindade mesopotâmica estava ligada à sabedoria, à água doce e à criação?",
+  "opcoes": [
+    "Enlil",
+    "Shamash",
+    "Enki",
+    "Marduk"
+  ],
+  "correta": 2
+},
+{
+  "pergunta": "Qual deusa mesopotâmica era associada ao amor, à fertilidade e à guerra?",
+  "opcoes": [
+    "Ereshkigal",
+    "Ishtar",
+    "Ninsun",
+    "Tiamat"
+  ],
+  "correta": 1
+},
+{
+  "pergunta": "Qual deus tornou-se o principal da Babilônia, especialmente durante o reinado de Hamurábi?",
+  "opcoes": [
+    "Anu",
+    "Enlil",
+    "Marduk",
+    "Shamash"
+  ],
+  "correta": 2
+},
+      
       {
         "pergunta": "A autonomia política da Mesopotâmia chegou ao fim no século VI a.C., quando a região foi conquistada por um grande império estrangeiro. Qual foi esse império?",
         "opcoes": [
