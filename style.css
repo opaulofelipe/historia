@@ -1,71 +1,57 @@
 * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 
-html, body {
-  height: 100%;
-}
+html, body { height: 100%; }
 
 body{
   margin:0;
+  min-height:100vh;
   background: radial-gradient(circle at top, #1e293b, #020617);
   color:#e5e7eb;
   position:relative;
-
-  /* Importante: body não rola; quem rola é o #app */
-  overflow:hidden;
+  overflow:hidden; /* body não rola */
 }
 
-/* ===== FUNDO COM IMAGEM (HOME) =====
-   iOS Safari muda o viewport (barra em cima/baixo).
-   Para não “sobrar faixa”, damos sangria no inset e usamos 100dvh.
-*/
+/* ===== FUNDO COM IMAGEM (HOME) ===== */
 body.home-bg::before{
   content:"";
   position:fixed;
-
-  /* sangria pra evitar faixas quando o viewport muda */
   top:-60px; left:-60px; right:-60px; bottom:-60px;
-
   background:url("./IMG_0773.jpeg") center/cover no-repeat;
   transform:scale(1.02);
   filter: blur(8px) saturate(1.12) brightness(0.88);
   opacity:0.78;
-
   z-index:-2;
   pointer-events:none;
 }
-
 body.home-bg::after{
   content:"";
   position:fixed;
   top:-60px; left:-60px; right:-60px; bottom:-60px;
-
   background:linear-gradient(
     180deg,
     rgba(2,6,23,0.58) 0%,
     rgba(2,6,23,0.50) 45%,
     rgba(2,6,23,0.70) 100%
   );
-
   z-index:-1;
   pointer-events:none;
 }
 
-/* ===== CONTAINER QUE ROLA (sempre) ===== */
+/* ===== CONTAINER QUE ROLA ===== */
 #app{
   width: 100%;
-  max-width: 420px;      /* mobile */
+  max-width: 420px;
   margin: 0 auto;
 
-  /* Usa viewport dinâmica (iOS) */
   height: 100dvh;
-  height: 100svh; /* fallback iOS */
+  height: 100svh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
   padding: 18px 20px calc(20px + env(safe-area-inset-bottom)) 20px;
 }
 
-/* HOME: trava rolagem do container */
+/* HOME: trava rolagem */
 body.home-lock #app{
   overflow-y: hidden;
 }
@@ -84,34 +70,27 @@ body.home-lock #app{
   margin-bottom:16px;
   box-shadow:0 10px 30px rgba(0,0,0,0.35);
 }
-
 .clickable{ cursor:pointer; transition:transform .18s ease; }
 .clickable:active{ transform:scale(0.995); }
 
 .muted{ opacity:0.78; font-size:13px; }
 
-/* HOME grid (responsivo sem mexer no HTML) */
+/* HOME grid */
 #view{ display:block; }
-
 body.home-bg #view{
   display:grid;
   grid-template-columns: 1fr;
   gap:14px;
 }
+body.home-bg #view .card{ margin-bottom:0; }
 
-body.home-bg #view .card{
-  margin-bottom:0;
-}
-
-/* ===== Sticky header + progresso =====
-   Sticky funciona porque #app é o scroll container.
-*/
+/* ===== HEADER STICKY (OPACO) + PROGRESSO ===== */
 .read-sticky{
   position: sticky;
   top: 0;
   z-index: 10;
 
-  background:#020617; /* opaco (legível) */
+  background:#020617;
   border:1px solid rgba(255,255,255,0.12);
   border-radius:14px;
 
@@ -163,28 +142,64 @@ body.home-bg #view .card{
 .progress span{
   display:block;
   height:100%;
-  background: linear-gradient(90deg, rgb(186, 168, 221), rgb(203, 186, 221));
+  background: linear-gradient(90deg, rgb(186, 168, 221), rgb(203, 186, 221)); /* lilás pastel */
 }
 
-/* Text */
-.text-body{
-  margin-top:14px;
-  font-size:15px;
-  line-height:1.65;
-  text-align:justify;
-  color:rgba(229,231,235,0.94);
+/* ===== QUIZ ===== */
+.question{
+  font-size: 16px;
+  line-height: 1.45;
+  margin: 0 0 14px 0;
+  color: rgba(229,231,235,0.96);
 }
-.text-body p{ margin:0 0 8px 0; }
-.text-body p:last-child{ margin-bottom:0; }
 
-/* Buttons */
+.options{
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.opt{
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.10);
+  border-radius: 14px;
+  padding: 14px 14px;
+  min-height: 52px;
+  color: rgba(255,255,255,0.94);
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.opt:active{
+  transform: translateY(1px);
+}
+
+.opt[disabled]{
+  opacity: 0.75;
+}
+
+/* Flash correto/errado */
+@keyframes flashGreen {
+  0% { box-shadow: 0 0 0 rgba(34,197,94,0); background: rgba(255,255,255,0.10); }
+  35% { box-shadow: 0 0 0 6px rgba(34,197,94,0.18); background: rgba(34,197,94,0.22); }
+  100% { box-shadow: 0 0 0 rgba(34,197,94,0); background: rgba(34,197,94,0.18); }
+}
+@keyframes flashRed {
+  0% { box-shadow: 0 0 0 rgba(239,68,68,0); background: rgba(255,255,255,0.10); }
+  35% { box-shadow: 0 0 0 6px rgba(239,68,68,0.18); background: rgba(239,68,68,0.20); }
+  100% { box-shadow: 0 0 0 rgba(239,68,68,0); background: rgba(255,255,255,0.10); }
+}
+
+.opt.correct{ animation: flashGreen 520ms ease; }
+.opt.wrong{ animation: flashRed 520ms ease; }
+
+/* Buttons (rodapé) */
 .actions{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap:10px;
   margin-top:16px;
-
-  /* garante área clicável no iOS perto da barra */
   padding-bottom: calc(6px + env(safe-area-inset-bottom));
 }
 
@@ -197,50 +212,23 @@ body.home-bg #view .card{
   background:rgba(255,255,255,0.12);
   color:#fff;
 }
-.btn-primary{ background:rgba(34,197,94,0.22); }
-.btn-ghost{ background:rgba(255,255,255,0.08); }
+.btn-primary{ background: rgba(186, 168, 221, 0.26); }
+.btn-ghost{ background: rgba(255,255,255,0.08); }
 .btn[disabled]{ opacity:0.45; }
 
 /* Confetti */
 canvas#confetti{ position:fixed; inset:0; pointer-events:none; }
 
-/* =========================
-   RESPONSIVO: TABLET
-========================= */
+/* ===== RESPONSIVO ===== */
 @media (min-width: 768px){
-  #app{
-    max-width: 860px;
-    padding: 26px 28px calc(28px + env(safe-area-inset-bottom)) 28px;
-  }
-  .app-title{ font-size:26px; }
-
-  body.home-bg #view{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  body:not(.home-bg) #view .card{
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  #app{ max-width: 860px; padding: 26px 28px calc(28px + env(safe-area-inset-bottom)) 28px; }
+  .app-title{ font-size: 26px; }
+  body.home-bg #view{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap:16px; }
+  body:not(.home-bg) #view .card{ max-width: 720px; margin-left:auto; margin-right:auto; }
 }
 
-/* =========================
-   RESPONSIVO: DESKTOP
-========================= */
 @media (min-width: 1100px){
-  #app{
-    max-width: 1100px;
-    padding: 30px 34px calc(34px + env(safe-area-inset-bottom)) 34px;
-  }
-
-  body.home-bg #view{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  body:not(.home-bg) #view .card{
-    max-width: 760px;
-  }
+  #app{ max-width: 1100px; padding: 30px 34px calc(34px + env(safe-area-inset-bottom)) 34px; }
+  body.home-bg #view{ grid-template-columns: repeat(3, minmax(0, 1fr)); gap:18px; }
+  body:not(.home-bg) #view .card{ max-width: 760px; }
 }

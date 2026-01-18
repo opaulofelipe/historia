@@ -1,4 +1,4 @@
-const CACHE = "historia-microtextos-v2";
+const CACHE = "historia-quiz-v1";
 
 const ASSETS = [
   "./",

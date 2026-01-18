@@ -1,75 +1,284 @@
 {
   "mesopotamia": {
     "titulo": "Mesopotâmia",
-    "textos": [
-      "A palavra Mesopotâmia vem do grego e significa literalmente “terra entre rios”, referência direta ao Tigre e ao Eufrates. Situada no Oriente Médio, na região do atual Iraque, essa área ocupava uma posição estratégica entre Ásia, África e Europa. Essa localização favoreceu trocas culturais, comerciais e tecnológicas, tornando a Mesopotâmia um dos primeiros grandes centros civilizacionais da história humana.\n\nClassificada como uma civilização hidráulica, a Mesopotâmia se desenvolveu a partir da necessidade de controlar cheias irregulares dos rios. A construção de canais, diques e reservatórios permitiu o avanço da agricultura e a fixação populacional, criando as bases para o surgimento das primeiras cidades.",
-      
-      "Entre aproximadamente 5000 a.C. e 1000 a.C., a Mesopotâmia foi ocupada por diversos povos que não formaram uma civilização única e homogênea. Os sumérios, acádios, amoritas (babilônios), assírios e caldeus se sucederam no controle político da região, cada qual deixando contribuições culturais, administrativas e religiosas.\n\nEssa sucessão de povos explica a constante instabilidade política da região, marcada por guerras, conquistas e reconstruções. Ao mesmo tempo, revela um intenso processo de continuidade cultural, no qual práticas religiosas, jurídicas e técnicas eram herdadas e adaptadas por povos diferentes.",
-      
-      "Os sumérios foram responsáveis por fundar as primeiras cidades conhecidas da história, como Ur, Uruk e Lagash. Essas cidades não formavam um Estado unificado, mas sim cidades-estado independentes, cada uma com governo próprio, leis locais e divindades protetoras específicas.\n\nO poder político era exercido pelo patesi, uma figura que acumulava funções religiosas e administrativas. Essa união entre política e religião reforçava a autoridade do governante, visto como intermediário entre os deuses e a população.",
-      
-      "A escrita cuneiforme, considerada a mais antiga da história humana, surgiu na Mesopotâmia por volta de 3200 a.C. Inicialmente, tinha função estritamente administrativa: registrar estoques, impostos, contratos e transações comerciais.\n\nGravada em tábuas de argila com o auxílio de estiletes em forma de cunha, a escrita evoluiu gradualmente para usos literários, religiosos e científicos. Seu desenvolvimento marcou uma ruptura fundamental na história, pois permitiu o registro permanente da memória coletiva.",
-      
-      "A Epopeia de Gilgamesh é a obra literária mais antiga conhecida da humanidade. Escrita originalmente em sumério e posteriormente em acádio, ela narra as aventuras do rei Gilgamesh, governante da cidade de Uruk.\n\nO poema aborda temas universais como amizade, poder, morte e a busca pela imortalidade. Ao final, Gilgamesh compreende os limites da condição humana, revelando uma reflexão filosófica surpreendentemente sofisticada para uma obra tão antiga.",
-      
-      "A religião mesopotâmica era politeísta e profundamente ligada às forças da natureza. Os deuses eram vistos como poderosos, instáveis e muitas vezes cruéis, refletindo a imprevisibilidade das cheias e secas dos rios.\n\nCada cidade possuía uma divindade principal, cultuada em grandes templos chamados zigurates. Essas construções monumentais funcionavam como centros religiosos, econômicos e administrativos, simbolizando a ligação entre o mundo terreno e o divino.",
-      
-      "Os babilônios ficaram conhecidos pela elaboração do Código de Hamurábi, um dos mais antigos conjuntos de leis escritas da história. Gravado em uma estela de pedra, o código reunia normas sobre propriedade, comércio, família e punições criminais.\n\nBaseado no princípio da Lei de Talião — “olho por olho, dente por dente” — o código não estabelecia igualdade jurídica, pois as punições variavam conforme a posição social do infrator e da vítima.",
-      
-      "Hamurábi, rei da Babilônia, governou no século XVIII a.C. e foi responsável por unificar grande parte da Mesopotâmia sob seu domínio. Seu governo combinou força militar com organização administrativa eficiente.\n\nAo divulgar publicamente suas leis, Hamurábi buscava legitimar seu poder, apresentando-se como escolhido dos deuses para promover a justiça e a ordem, ainda que essa justiça fosse profundamente hierárquica.",
-      
-      "Os assírios formaram um dos impérios mais militarizados da Antiguidade. Com um exército disciplinado, uso intensivo de ferro e táticas de terror psicológico, conquistaram vastos territórios entre os séculos IX e VII a.C.\n\nA violência extrema era parte consciente de sua política: deportações em massa, execuções públicas e destruição de cidades serviam para desencorajar rebeliões e manter o controle imperial.",
-      
-      "Nínive, capital do Império Assírio, destacou-se como um importante centro cultural. Foi lá que o rei Assurbanipal organizou uma das primeiras grandes bibliotecas da história, reunindo milhares de tábuas de argila.\n\nEssa biblioteca preservou obras literárias, científicas e religiosas mesopotâmicas, sendo fundamental para o conhecimento moderno sobre essas civilizações.",
-      
-      "Após a queda do Império Assírio, os caldeus reconstruíram a Babilônia, inaugurando o chamado Império Neobabilônico. O período ficou marcado por intensa atividade arquitetônica e cultural.\n\nSob Nabucodonosor II, a cidade tornou-se um símbolo de riqueza e poder, com muralhas imponentes e obras monumentais.",
-      
-      "Os Jardins Suspensos da Babilônia, atribuídos a Nabucodonosor II, figuram entre as Sete Maravilhas do Mundo Antigo. Embora sua existência ainda seja debatida, relatos antigos descrevem terraços verdes irrigados artificialmente.\n\nCaso tenham existido, representariam um impressionante domínio técnico da hidráulica e da engenharia.",
-      
-      "A Mesopotâmia também se destacou no campo da matemática. Os mesopotâmicos desenvolveram o sistema sexagesimal, baseado no número 60, utilizado até hoje na divisão do tempo e dos ângulos.\n\nEsse sistema revela uma notável capacidade de abstração e organização numérica.",
-      
-      "A astronomia mesopotâmica estava profundamente ligada à religião. A observação dos astros era usada para prever presságios e interpretar a vontade dos deuses.\n\nApesar desse caráter religioso, esses estudos lançaram as bases da astronomia científica ao registrar ciclos celestes com precisão.",
-      
-      "A sociedade mesopotâmica era rigidamente hierarquizada. No topo estavam o rei, sacerdotes e nobres; abaixo, comerciantes, artesãos e camponeses; e na base, os escravizados.\n\nA mobilidade social era limitada, e a posição do indivíduo determinava seus direitos e deveres.",
-      
-      "A Mesopotâmia é chamada de berço da civilização porque reuniu, pela primeira vez, elementos fundamentais como cidades, escrita, leis, Estado organizado e especialização do trabalho.\n\nEssas estruturas moldaram profundamente o desenvolvimento das civilizações posteriores."
-    ]
-  },
+    "perguntas": [
 
-  "egito": {
-    "titulo": "Egito Antigo",
-    "textos": [
-      "O Egito Antigo desenvolveu-se no nordeste da África, ao longo do rio Nilo. Diferente da Mesopotâmia, o Nilo possuía cheias regulares e previsíveis, o que proporcionou maior estabilidade econômica e política.\n\nEssa previsibilidade contribuiu para uma visão de mundo mais otimista, refletida na religião e na organização social egípcia.",
+      {
+        "pergunta": "O termo Mesopotâmia foi criado por autores gregos muito tempo depois do florescimento dessas civilizações. Qual é o significado literal da palavra Mesopotâmia?",
+        "opcoes": [
+          "Terra fértil",
+          "Terra entre rios",
+          "Terra dos deuses",
+          "Terra das cidades"
+        ],
+        "correta": 1
+      },
+
+      {
+        "pergunta": "A expressão Mesopotâmia faz referência direta a dois grandes rios que estruturaram a vida econômica e social da região. Quais eram esses rios?",
+        "opcoes": [
+          "Nilo e Jordão",
+          "Tigre e Eufrates",
+          "Indo e Ganges",
+          "Danúbio e Reno"
+        ],
+        "correta": 1
+      },
+
+      {
+        "pergunta": "A maior parte do território da antiga Mesopotâmia corresponde, hoje, principalmente a qual país moderno?",
+        "opcoes": [
+          "Síria",
+          "Irã",
+          "Iraque",
+          "Turquia"
+        ],
+        "correta": 2
+      },
+
+      {
+        "pergunta": "As principais construções religiosas das cidades mesopotâmicas tinham formato de pirâmide escalonada e funcionavam como centros de culto e administração. Como essas construções eram chamadas?",
+        "opcoes": [
+          "Pirâmides",
+          "Zigurates",
+          "Obeliscos",
+          "Templos subterrâneos"
+        ],
+        "correta": 1
+      },
+
+      {
+        "pergunta": "Na Mesopotâmia surgiu o sistema de escrita mais antigo conhecido da história humana, desenvolvido inicialmente para atender necessidades práticas das cidades. Qual é o nome dessa escrita?",
+        "opcoes": [
+          "Hieroglífica",
+          "Cuneiforme",
+          "Alfabética",
+          "Linear"
+        ],
+        "correta": 1
+      },
+
+      {
+        "pergunta": "A escrita cuneiforme era registrada por meio de marcas em forma de cunha feitas em um material abundante na região. Em qual material esses textos eram gravados?",
+        "opcoes": [
+          "Papiro",
+          "Pergaminho",
+          "Tábuas de argila",
+          "Placas de madeira"
+        ],
+        "correta": 2
+      },
+
+      {
+        "pergunta": "Quando surgiu, a escrita cuneiforme não tinha finalidade literária ou religiosa. Qual era seu principal uso inicial?",
+        "opcoes": [
+          "Registro de mitos",
+          "Controle administrativo e contábil",
+          "Ensino religioso",
+          "Correspondência pessoal"
+        ],
+        "correta": 1
+      },
+
+      {
+        "pergunta": "A obra literária mais antiga conhecida da história humana foi registrada na Mesopotâmia e narra as aventuras de um rei lendário. Qual é o nome dessa obra?",
+        "opcoes": [
+          "Código de Hamurábi",
+          "Epopeia de Gilgámesh",
+          "Livro dos Mortos",
+          "Ilíada"
+        ],
+        "correta": 1
+      },
+
+      {
+        "pergunta": "A Epopeia de Gilgámesh trata principalmente de uma questão central da condição humana, explorada a partir da amizade, da morte e da jornada do herói. Qual é o tema central dessa narrativa?",
+        "opcoes": [
+          "Expansão territorial",
+          "Busca pela imortalidade",
+          "Origem dos deuses",
+          "Fundação das cidades"
+        ],
+        "correta": 1
+      },
+
+      {
+        "pergunta": "Na Mesopotâmia viveu a primeira autora conhecida da história a assinar seus próprios textos. Filha do rei acádio Sargão, ela foi alta sacerdotisa, escreveu hinos religiosos em primeira pessoa e teve seu nome preservado. Quem foi essa autora?",
+        "opcoes": [
+          "Ishtar",
+          "Enheduana",
+          "Ninsun",
+          "Semíramis"
+        ],
+        "correta": 1
+      },
+
+      {
+        "pergunta": "Quem foram os fundadores das primeiras cidades na Mesopotâmia, como Ur e Uruk?",
+        "opcoes": [
+          "Acádios",
+          "Sumérios",
+          "Babilônios",
+          "Assírios"
+        ],
+        "correta": 1
+      },
       
-      "A sociedade egípcia era estruturada de forma hierárquica e rígida. No topo estava o faraó, considerado um deus vivo, responsável por manter a ordem cósmica, chamada maat.\n\nAbaixo dele vinham sacerdotes, escribas e nobres, seguidos por artesãos, camponeses e escravizados.",
+      {
+        "pergunta": "Os primeiros povos responsáveis pela fundação das cidades mesopotâmicas foram os sumérios, estabelecidos principalmente no sul da região. Como se organizavam politicamente essas cidades?",
+        "opcoes": [
+          "Império unificado",
+          "Cidades-estado independentes",
+          "Confederação tribal",
+          "Monarquia feudal"
+        ],
+        "correta": 1
+      },
+
+      {
+        "pergunta": "Além da escrita cuneiforme, os sumérios desenvolveram outras inovações fundamentais para a história humana. Qual dessas é corretamente atribuída a eles e está presente em nossa forma de marcar o tempo até os dias de hoje?",
+        "opcoes": [
+          "Sistema sexagesimal (base 60)",
+          "Alfabeto fonético",
+          "Calendário solar anual",
+          "Democracia representativa"
+        ],
+        "correta": 0
+      },
+
+      {
+        "pergunta": "Qual civilização mesopotâmica formou um dos primeiros impérios territoriais da história?",
+        "opcoes": [
+          "Assírios",
+          "Acádios",
+          "Caldeus",
+          "Hititas"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "O principal governante do Império Acádio foi Sargão, responsável por uma transformação política inédita na região. Qual foi sua principal realização?",
+        "opcoes": [
+          "Criar cidades-estado independentes",
+          "Unificar várias cidades sob um único poder imperial",
+          "Estabelecer o primeiro código de leis",
+          "Fundar a cidade da Babilônia"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "Durante o Império Acádio, ocorreu uma mudança importante na cultura escrita mesopotâmica. Qual foi a principal inovação introduzida pelos acádios nesse campo?",
+        "opcoes": [
+          "Criação de um novo sistema de escrita",
+          "Uso de uma língua semítica na escrita cuneiforme",
+          "Substituição da escrita por registros orais",
+          "Abandono do sumério como língua culta"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "Após o declínio do Império Acádio, um povo de origem amorita estabeleceu um novo reino na Mesopotâmia central. Qual cidade tornou-se o principal centro político desse reino?",
+        "opcoes": [
+          "Ur",
+          "Lagash",
+          "Babilônia",
+          "Nínive"
+        ],
+        "correta": 2
+      },
+      {
+        "pergunta": "O rei mais conhecido da Babilônia Antiga foi Hamurábi. Por qual motivo histórico ele é lembrado?",
+        "opcoes": [
+          "Conquistas marítimas",
+          "Elaboração de um código de leis escrito",
+          "Criação do alfabeto",
+          "Reforma religiosa monoteísta"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "O Código de Hamurábi estabelecia punições diferentes conforme a posição social das pessoas envolvidas. Como é conhecido esse princípio jurídico?",
+        "opcoes": [
+          "Direito natural",
+          "Lei de talião",
+          "Justiça universal",
+          "Direito consuetudinário"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "No norte da Mesopotâmia, os assírios construíram um império marcado pela expansão territorial. Qual característica foi central para o poder assírio?",
+        "opcoes": [
+          "Pacifismo religioso",
+          "Militarismo intenso",
+          "Economia baseada no comércio marítimo",
+          "Isolamento cultural"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "Durante o auge do Império Assírio, uma cidade tornou-se seu principal centro político e administrativo e também abrigou a sede da lendária Biblioteca de Assurbanípal, uma coleção de milhares de placas de argila contendo escritos em cuneiforme. Qual era essa cidade?",
+        "opcoes": [
+          "Uruk",
+          "Babilônia",
+          "Nínive",
+          "Eridu"
+        ],
+        "correta": 2
+      },
+      {
+        "pergunta": "Os assírios utilizavam deportações em massa como estratégia de dominação imperial. Qual era o principal objetivo dessa prática?",
+        "opcoes": [
+          "Gerar mais empregos a cidadãos assírios",
+          "Evitar revoltas e resistências locais",
+          "Promover integração cultural voluntária",
+          "Expandir a produção agrícola"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "Após a queda do Império Assírio, qual povo assumiu a região criando o Império Neobabilônico?",
+        "opcoes": [
+          "Sumérios",
+          "Caldeus",
+          "Acádios",
+          "Elamitas"
+        ],
+        "correta": 2
+      },
+      {
+        "pergunta": "O governante mais associado ao auge do Império Neobabilônico foi Nabucodonosor II. Qual realização marcou seu governo?",
+        "opcoes": [
+          "Fundação do Império Acádio",
+          "Reconstrução monumental da Babilônia",
+          "Criação do alfabeto fonético",
+          "Conversão oficial ao monoteísmo"
+        ],
+        "correta": 1
+      },
+
+      {
+        "pergunta": "Quais construções lendárias são associadas a Nabucodonosor II?",
+        "opcoes": [
+          "Vale dos Reis e Pirâmides de Gizé",
+          "Jardins Suspensos da Babilônia e Torre de Babel",
+          "Jardins Suspensos da Babilônia e Vale dos Reis",
+          "Torre de Babel e Satrapas de Ciro"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "A autonomia política da Mesopotâmia chegou ao fim no século VI a.C., quando a região foi conquistada por um grande império estrangeiro. Qual foi esse império?",
+        "opcoes": [
+          "Egípcio",
+          "Grego",
+          "Persa",
+          "Romano"
+        ],
+        "correta": 2
+      }
       
-      "O Estado egípcio era altamente centralizado. O faraó concentrava poderes políticos, religiosos e militares, governando com apoio de uma burocracia eficiente.\n\nOs escribas desempenhavam papel fundamental na administração, registrando impostos, colheitas e decretos.",
-      
-      "A escrita egípcia, conhecida como hieroglífica, combinava símbolos figurativos, fonéticos e ideográficos. Inicialmente usada em contextos religiosos e monumentais, também existiam formas simplificadas, como a escrita hierática e demótica.\n\nA escrita era um instrumento de poder, restrito a uma elite alfabetizada.",
-      
-      "A religião egípcia era politeísta e marcada pela crença na vida após a morte. Os egípcios acreditavam que a alma sobrevivia ao corpo, desde que este fosse preservado.\n\nEssa crença levou ao desenvolvimento de técnicas avançadas de mumificação.",
-      
-      "Os rituais funerários egípcios envolviam complexos processos simbólicos. O coração do morto era pesado em um julgamento divino, sendo comparado à pena da deusa Maat.\n\nAqueles considerados justos alcançariam a vida eterna.",
-      
-      "As pirâmides do Egito Antigo eram túmulos monumentais construídos durante o Antigo Império. A mais famosa é a Pirâmide de Quéops, em Gizé.\n\nEssas construções demonstram notável conhecimento matemático, arquitetônico e organizacional.",
-      
-      "Com o tempo, os túmulos reais passaram a ser construídos no Vale dos Reis, buscando maior proteção contra saqueadores.\n\nMesmo assim, muitos túmulos foram violados ao longo dos séculos.",
-      
-      "A economia egípcia baseava-se na agricultura, favorecida pelas cheias do Nilo. O Estado controlava a distribuição de terras e alimentos.\n\nEssa centralização garantiu estabilidade, mas também reforçou o poder do faraó.",
-      
-      "O Egito manteve intensas relações comerciais com outras regiões, como Núbia, Levante e Mediterrâneo.\n\nEssas trocas incluíam ouro, madeira, incenso e produtos artesanais.",
-      
-      "A arte egípcia seguia regras rígidas, com forte caráter simbólico. As figuras eram representadas de forma idealizada, não realista.\n\nA função da arte era preservar a ordem e garantir a continuidade da vida após a morte.",
-      
-      "A medicina egípcia era relativamente avançada para a época. Textos médicos descrevem diagnósticos, tratamentos e cirurgias simples.\n\nNo entanto, práticas mágicas e religiosas coexistiam com observações empíricas.",
-      
-      "A matemática egípcia era usada principalmente para fins práticos, como medição de terras e construção.\n\nOs egípcios dominavam frações e cálculos geométricos básicos.",
-      
-      "Ao longo de sua história, o Egito passou por períodos de unificação e fragmentação, conhecidos como Impérios e Períodos Intermediários.\n\nEssas fases refletem crises políticas, invasões estrangeiras e reformas internas.",
-      
-      "O Egito foi conquistado por diversos povos, como assírios, persas, gregos e romanos.\n\nApesar disso, sua cultura exerceu profunda influência sobre o mundo antigo.",
-      
-      "O Egito Antigo deixou um legado duradouro na arquitetura, religião, ciência e política.\n\nSeu modelo de Estado e suas concepções religiosas continuam fascinando estudiosos até hoje."
+
     ]
   }
 }
