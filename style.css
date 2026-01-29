@@ -233,3 +233,27 @@ canvas#confetti{ position:fixed; inset:0; pointer-events:none; }
   body:not(.home-bg) #view .card{ max-width: 760px; }
 }
 
+/* === FIX SCROLL (mobile/iOS) === */
+html, body{
+  height: 100%;
+}
+
+body{
+  overflow: hidden; /* ok: o scroll é no #app */
+}
+
+/* garante que o container do app role sempre */
+#app{
+  height: 100vh;              /* fallback */
+  height: 100dvh;             /* mobile moderno */
+  overflow-y: auto !important; /* força rolagem */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: auto;
+  touch-action: pan-y;        /* permite arrastar para baixo */
+}
+
+/* evita que algum elemento “mate” o scroll por cima */
+.read-sticky{
+  touch-action: pan-y;
+}
+
