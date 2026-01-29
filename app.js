@@ -8,6 +8,45 @@ let idx = 0;               // pergunta atual (0-based)
 let locked = false;        // trava após acerto
 let currentShuffle = null; // { options: [...], correctIndex: n }
 
+/* ========= SOM (plim) SEM ARQUIVO ========= */
+let audioCtx = null;
+
+function playCorrectSound() {
+  try {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+
+    if (!audioCtx) audioCtx = new AC();
+    if (audioCtx.state === "suspended") audioCtx.resume();
+
+    const t0 = audioCtx.currentTime;
+
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+
+    // timbre "plim"
+    osc.type = "triangle";
+
+    // envelope curto (ataque + decay)
+    gain.gain.setValueAtTime(0.0001, t0);
+    gain.gain.exponentialRampToValueAtTime(0.22, t0 + 0.01);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.18);
+
+    // leve "subida" de pitch
+    osc.frequency.setValueAtTime(880, t0);
+    osc.frequency.exponentialRampToValueAtTime(1320, t0 + 0.09);
+
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+
+    osc.start(t0);
+    osc.stop(t0 + 0.20);
+  } catch (_) {
+    // não quebra o app se o áudio falhar
+  }
+}
+
+/* ========= CARREGAMENTO ========= */
 fetch("./dados.json")
   .then(r => r.json())
   .then(d => {
@@ -23,13 +62,15 @@ fetch("./dados.json")
     `;
   });
 
+/* ========= HELPERS ========= */
 function setHomeMode(on) {
   document.body.classList.toggle("home-bg", !!on);
   document.body.classList.toggle("home-lock", !!on);
 }
 
 function scrollToTop() {
-  appContainer.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  if (!appContainer) return;
+  appContainer.scrollTo({ top: 0, left: 0, behavior: "auto" });
 }
 
 function clamp(n, min, max) {
@@ -45,8 +86,10 @@ function escapeHtml(str) {
     .replaceAll("'", "&#039;");
 }
 
-/* ===== PROGRESSO POR CIVILIZAÇÃO ===== */
-function keyProg(civ) { return "quiz_prog_" + civ; }
+/* ========= PROGRESSO POR CIVILIZAÇÃO ========= */
+function keyProg(civ) {
+  return "quiz_prog_" + civ;
+}
 
 function getProg(civ) {
   return Number(localStorage.getItem(keyProg(civ))) || 0;
@@ -61,19 +104,31 @@ function percent(done, total) {
   return Math.floor((clamp(done, 0, total) / total) * 100);
 }
 
-/* ===== HOME ===== */
+/* ========= HOME ========= */
 function renderHome() {
   setHomeMode(true);
   view.innerHTML = "";
 
-  Object.keys(dados).forEach(civ => {
-    const total = dados[civ].perguntas.length;
+  const civs = Object.keys(dados || {});
+  if (!civs.length) {
+    view.innerHTML = `
+      <div class="card">
+        <h2>Nenhuma civilização encontrada</h2>
+        <p class="muted">Verifique se o <b>dados.json</b> contém pelo menos uma civilização.</p>
+      </div>
+    `;
+    scrollToTop();
+    return;
+  }
+
+  civs.forEach(civ => {
+    const total = (dados[civ]?.perguntas || []).length;
     const p = clamp(getProg(civ), 0, total);
     const pct = percent(p, total);
 
     view.innerHTML += `
       <div class="card clickable" onclick="iniciar('${civ}')">
-        <h2 style="margin:0 0 10px 0;">${escapeHtml(dados[civ].titulo)}</h2>
+        <h2 style="margin:0 0 10px 0;">${escapeHtml(dados[civ].titulo || civ)}</h2>
         <div class="progress"><span style="width:${pct}%"></span></div>
         <div class="muted" style="margin-top:8px;">
           ${pct}% concluído • ${p}/${total} perguntas
@@ -85,12 +140,12 @@ function renderHome() {
   scrollToTop();
 }
 
-/* ===== QUIZ ===== */
+/* ========= QUIZ ========= */
 function iniciar(civ) {
   setHomeMode(false);
   civAtual = civ;
 
-  const total = dados[civAtual].perguntas.length;
+  const total = (dados[civAtual]?.perguntas || []).length;
   idx = clamp(getProg(civAtual), 0, total);
 
   locked = false;
@@ -101,18 +156,33 @@ function iniciar(civ) {
 }
 
 function renderQuiz() {
-  const total = dados[civAtual].perguntas.length;
+  const perguntas = dados[civAtual]?.perguntas || [];
+  const total = perguntas.length;
+
+  if (!total) {
+    view.innerHTML = `
+      <div class="card">
+        <h2>Sem perguntas</h2>
+        <p class="muted">Esta civilização ainda não tem perguntas no <b>dados.json</b>.</p>
+        <div class="actions">
+          <button class="btn btn-primary" onclick="voltarHome()">Voltar</button>
+        </div>
+      </div>
+    `;
+    scrollToTop();
+    return;
+  }
 
   if (idx >= total) {
     finalizar();
     return;
   }
 
-  // Progresso salvo: o mais longe que a pessoa já chegou
+  // progresso salvo = mais longe que já chegou
   const progSalvo = clamp(getProg(civAtual), 0, total);
   const pct = percent(progSalvo, total);
 
-  const q = dados[civAtual].perguntas[idx];
+  const q = perguntas[idx];
 
   // embaralha opções a cada render
   currentShuffle = shuffleQuestion(q);
@@ -122,19 +192,23 @@ function renderQuiz() {
 
       <div class="read-sticky">
         <div class="read-header">
-          <div class="civ-badge">${escapeHtml(dados[civAtual].titulo)}</div>
+          <div class="civ-badge">${escapeHtml(dados[civAtual].titulo || civAtual)}</div>
           <div class="text-counter">Pergunta ${idx + 1} de ${total}</div>
           <div class="percent-pill">${pct}%</div>
         </div>
         <div class="progress"><span style="width:${pct}%"></span></div>
       </div>
 
-      <p class="question">${escapeHtml(q.pergunta)}</p>
+      <p class="question">${escapeHtml(q.pergunta || "")}</p>
 
       <div class="options">
-        ${currentShuffle.options.map((opt, i) => `
+        ${currentShuffle.options
+          .map(
+            (opt, i) => `
           <button class="opt" data-i="${i}" onclick="responder(${i})">${escapeHtml(opt)}</button>
-        `).join("")}
+        `
+          )
+          .join("")}
       </div>
 
       <div class="actions" style="grid-template-columns: 1fr 1fr 1fr;">
@@ -156,16 +230,27 @@ function responder(i) {
   const btn = buttons.find(b => Number(b.dataset.i) === i);
   if (!btn) return;
 
-  const isCorrect = (i === currentShuffle.correctIndex);
+  const isCorrect = i === currentShuffle.correctIndex;
 
   if (isCorrect) {
     locked = true;
+
+    // efeito de acerto
     btn.classList.remove("wrong");
     btn.classList.add("correct");
 
-    buttons.forEach(b => b.disabled = true);
+    // reinicia e aplica a animação de borda (border-run)
+    btn.classList.remove("border-run");
+    void btn.offsetWidth; // reflow para reiniciar animação
+    btn.classList.add("border-run");
 
-    const total = dados[civAtual].perguntas.length;
+    // som de acerto
+    playCorrectSound();
+
+    // trava opções
+    buttons.forEach(b => (b.disabled = true));
+
+    const total = (dados[civAtual]?.perguntas || []).length;
     const nextIdx = clamp(idx + 1, 0, total);
 
     // progresso salvo = máximo atingido (não diminui ao voltar)
@@ -176,12 +261,11 @@ function responder(i) {
       idx = nextIdx;
       renderQuiz();
       scrollToTop();
-    }, 520);
-
+    }, 620);
   } else {
-    // errado: pisca vermelho, mas permite tentar novamente
+    // errado: pisca vermelho e permite tentar novamente
     btn.classList.remove("wrong");
-    void btn.offsetWidth; // reinicia animação
+    void btn.offsetWidth; // reinicia animação de erro
     btn.classList.add("wrong");
 
     setTimeout(() => {
@@ -190,19 +274,22 @@ function responder(i) {
   }
 }
 
-/* ===== VOLTAR PERGUNTA ANTERIOR ===== */
+/* ========= VOLTAR PERGUNTA ========= */
 function anteriorPergunta() {
-  if (locked) return;      // se estiver no meio do acerto, evita bug
+  if (locked) return;
   if (idx <= 0) return;
 
   idx -= 1;
   currentShuffle = null;
+
   renderQuiz();
   scrollToTop();
 }
 
+/* ========= AÇÕES ========= */
 function reiniciarCivilizacao() {
   if (!civAtual) return;
+
   setProg(civAtual, 0);
   idx = 0;
   locked = false;
@@ -222,7 +309,7 @@ function voltarHome() {
   scrollToTop();
 }
 
-/* ===== FINAL ===== */
+/* ========= FINAL ========= */
 function finalizar() {
   soltarConfete();
 
@@ -230,7 +317,7 @@ function finalizar() {
     <div class="card">
       <h2 style="margin:0;">🎉 Parabéns!</h2>
       <p class="muted" style="margin-top:6px;">
-        Você concluiu <b>${escapeHtml(dados[civAtual].titulo)}</b>.
+        Você concluiu <b>${escapeHtml(dados[civAtual].titulo || civAtual)}</b>.
       </p>
 
       <div class="actions">
@@ -239,12 +326,16 @@ function finalizar() {
       </div>
     </div>
   `;
+
   scrollToTop();
 }
 
-/* ===== embaralhamento ===== */
+/* ========= EMBARALHAMENTO ========= */
 function shuffleQuestion(q) {
-  const arr = q.opcoes.map((text, originalIndex) => ({ text, originalIndex }));
+  const opcs = Array.isArray(q.opcoes) ? q.opcoes : ["", "", "", ""];
+  const correta = Number.isInteger(q.correta) ? q.correta : 0;
+
+  const arr = opcs.map((text, originalIndex) => ({ text, originalIndex }));
 
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -252,25 +343,28 @@ function shuffleQuestion(q) {
   }
 
   const options = arr.map(x => x.text);
-  const correctIndex = arr.findIndex(x => x.originalIndex === q.correta);
+  const correctIndex = arr.findIndex(x => x.originalIndex === correta);
 
   return { options, correctIndex };
 }
 
-/* ===== Confete ===== */
+/* ========= CONFETE ========= */
 function soltarConfete() {
   const c = document.getElementById("confetti");
-  const ctx = c.getContext("2d");
-  c.width = innerWidth;
-  c.height = innerHeight;
+  if (!c) return;
 
-  const partes = Array.from({ length: 120 }, () => ({
+  const ctx = c.getContext("2d");
+  c.width = window.innerWidth;
+  c.height = window.innerHeight;
+
+  const partes = Array.from({ length: 140 }, () => ({
     x: Math.random() * c.width,
     y: -20 - Math.random() * c.height * 0.3,
     s: 2 + Math.random() * 6,
     vx: -1 + Math.random() * 2,
     vy: 2 + Math.random() * 4,
-    rot: Math.random() * Math.PI
+    rot: Math.random() * Math.PI,
+    hue: Math.floor(Math.random() * 360)
   }));
 
   const inicio = Date.now();
@@ -288,6 +382,7 @@ function soltarConfete() {
       ctx.save();
       ctx.translate(p.x, p.y);
       ctx.rotate(p.rot);
+      ctx.fillStyle = `hsl(${p.hue} 80% 60%)`;
       ctx.fillRect(-p.s / 2, -p.s / 2, p.s, p.s);
       ctx.restore();
     });
@@ -299,7 +394,7 @@ function soltarConfete() {
   tick();
 }
 
-/* expose */
+/* ========= EXPOSE (onclick inline) ========= */
 window.iniciar = iniciar;
 window.responder = responder;
 window.anteriorPergunta = anteriorPergunta;
