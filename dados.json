@@ -1,671 +1,892 @@
 {
+  "pre_historia": {
+    "titulo": "Pré-História",
+    "perguntas": [
+     {
+    "pergunta": "Qual tecnologia é mais típica do Paleolítico?",
+    "opcoes": ["Pedra lascada", "Pedra polida", "Cerâmica", "Cobre trabalhado"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual modo de vida predominou durante a maior parte do Paleolítico?",
+    "opcoes": ["Nomadismo", "Sedentarismo", "Pastoralismo", "Vida urbana"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual base econômica é mais associada ao Paleolítico?",
+    "opcoes": ["Caça e coleta", "Agricultura", "Criação de rebanhos", "Comércio regular"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual avanço ajudou grupos paleolíticos a ocupar ambientes frios?",
+    "opcoes": ["Abrigos e roupas de pele", "Arado de tração humana", "Cerâmica de armazenamento", "Irrigação planejada"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual prática é famosa em sítios do Paleolítico Superior?",
+    "opcoes": ["Pintura rupestre", "Escrita pictográfica", "Escultura em mármore", "Moedas cunhadas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual uso do fogo tem mais relação com o Paleolítico?",
+    "opcoes": ["Cozimento e aquecimento", "Fundição de metais", "Queima de tijolos", "Vidro soprado"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual ferramenta combina melhor com o Paleolítico?",
+    "opcoes": ["Biface de pedra", "Machado polido", "Foice lítica", "Arado simples"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Como costuma ser descrita a organização social no Paleolítico?",
+    "opcoes": ["Bandos pequenos", "Cidades-Estado", "Reinos agrícolas", "Impérios territoriais"],
+    "correta": 0
+  },
+
+    {
+    "pergunta": "Qual ambiente era mais comum para acampamentos paleolíticos?",
+    "opcoes": ["Cavernas e abrigos", "Cidades muradas", "Templos de pedra", "Vilas permanentes"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual atividade ajudava a garantir alimento no Paleolítico?",
+    "opcoes": ["Coleta sazonal", "Monocultura", "Plantio irrigado", "Comércio de grãos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual material era mais usado para fazer ferramentas no Paleolítico?",
+    "opcoes": ["Sílex", "Ferro", "Bronze", "Aço"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual característica marca o Paleolítico Inferior?",
+    "opcoes": ["Ferramentas simples", "Cidades estáveis", "Escrita regular", "Agricultura intensiva"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual comportamento está ligado ao aumento de sobrevivência no Paleolítico?",
+    "opcoes": ["Cooperação em grupo", "Burocracia estatal", "Tributação fixa", "Servidão rural"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual evidência indica vida simbólica no Paleolítico?",
+    "opcoes": ["Enterros com objetos", "Leis escritas", "Moedas padronizadas", "Arquivos em tabuletas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual recurso era valioso para caça no Paleolítico Superior?",
+    "opcoes": ["Lanças e pontas", "Arado leve", "Rede de irrigação", "Roda de carroça"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual habilidade favoreceu migrações longas no Paleolítico?",
+    "opcoes": ["Adaptação ambiental", "Escrita alfabética", "Metalurgia", "Navegação por mapas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual é um exemplo de arte paleolítica?",
+    "opcoes": ["Gravuras em pedra", "Mosaicos de vidro", "Afrescos palacianos", "Estátuas monumentais"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual alimento era mais comum no Paleolítico?",
+    "opcoes": ["Carne e frutos", "Pão de trigo", "Arroz cultivado", "Milho domesticado"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual animal era frequentemente caçado por grupos paleolíticos em regiões frias?",
+    "opcoes": ["Rena", "Camelo", "Búfalo-d'água", "Lhama"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual inovação aumentou a eficiência na caça a distância?",
+    "opcoes": ["Propulsor de lança", "Roda", "Arado", "Forno de cerâmica"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual tipo de moradia pode ter sido usado além de cavernas?",
+    "opcoes": ["Tendas", "Casas de tijolo", "Palácios", "Zigurates"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual afirmação combina com a dieta paleolítica?",
+    "opcoes": ["Variada e oportunista", "Baseada em cereais", "Centrada em leite", "Dependente de sal marinho"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual atividade se intensificava conforme as estações?",
+    "opcoes": ["Busca de recursos", "Cobrança de impostos", "Plantio anual", "Construção de templos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual é uma característica do Paleolítico Médio?",
+    "opcoes": ["Ferramentas mais refinadas", "Metalurgia do bronze", "Escrita em papiro", "Cidades portuárias"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual espécie humana é associada a parte do Paleolítico Médio?",
+    "opcoes": ["Neandertais", "Homo erectus", "Australopitecos", "Homo floresiensis"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual prática pode indicar cuidado social no Paleolítico?",
+    "opcoes": ["Assistência a feridos", "Serviço militar obrigatório", "Tributos ao rei", "Trabalho servil fixo"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual clima influenciou rotas e recursos no Paleolítico?",
+    "opcoes": ["Glaciações", "Monções estáveis", "Secas sazonais do Nilo", "El Niño documentado"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual técnica ajudava a produzir lâminas de pedra?",
+    "opcoes": ["Percussão e retoque", "Fundição", "Moldagem em argila", "Forjamento"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual relação é mais correta sobre o Paleolítico e animais?",
+    "opcoes": ["Caça e aproveitamento", "Domesticação ampla", "Criação intensiva", "Exportação de rebanhos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual recurso era essencial para fabricar pontas e raspadores?",
+    "opcoes": ["Pedra dura", "Papiro", "Bronze", "Aço temperado"],
+    "correta": 0
+  },
+  {
+    "pergunta": "O que melhor define a produção material paleolítica?",
+    "opcoes": ["Tecnologia lítica", "Arquitetura de pedra", "Metalurgia avançada", "Cerâmica em massa"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual fator ajudava a explicar a mobilidade paleolítica?",
+    "opcoes": ["Recursos dispersos", "Propriedade privada fixa", "Armazenamento de excedentes", "Burocracia estatal"],
+    "correta": 0
+  },
+
+    {
+    "pergunta": "Qual mudança é mais associada ao Neolítico?",
+    "opcoes": ["Agricultura e sedentarização", "Caça e coleta", "Metalurgia do bronze", "Escrita alfabética"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual ferramenta é mais típica do Neolítico?",
+    "opcoes": ["Machado polido", "Biface lascado", "Lança de osso", "Ponta musteriense"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual prática se torna mais comum no Neolítico?",
+    "opcoes": ["Estocar excedentes", "Migrar sempre", "Evitar domesticação", "Viver só em cavernas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual relação com animais é mais ligada ao Neolítico?",
+    "opcoes": ["Domesticação", "Caça exclusiva", "Extinção dirigida", "Uso apenas ritual"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual material aparece com força no Neolítico para guardar alimentos?",
+    "opcoes": ["Cerâmica", "Aço", "Vidro", "Papiro"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual consequência direta do sedentarismo neolítico?",
+    "opcoes": ["Aldeias permanentes", "Fim do trabalho", "Desaparecimento de conflitos", "Igualdade total"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual atividade ganha importância com a agricultura neolítica?",
+    "opcoes": ["Tecer fibras", "Minerar ferro", "Navegar oceanos", "Cunhar moedas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual planta é frequentemente associada às primeiras agriculturas no Crescente Fértil?",
+    "opcoes": ["Trigo e cevada", "Batata e tomate", "Milho e cacau", "Arroz e chá"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual efeito social tende a surgir com excedentes no Neolítico?",
+    "opcoes": ["Desigualdade social", "Fim da divisão de tarefas", "Ausência de liderança", "Retorno ao nomadismo"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual tipo de construção se expande no Neolítico?",
+    "opcoes": ["Casas de barro e pedra", "Arranha-céus", "Palácios imperiais", "Teatros romanos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual prática funerária pode indicar vida comunitária no Neolítico?",
+    "opcoes": ["Cemitérios próximos às aldeias", "Cremação industrial", "Enterro em sarcófagos de mármore", "Mumificação estatal"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual técnica agrícola simples pode ocorrer no Neolítico?",
+    "opcoes": ["Queimada controlada", "Hidroponia", "Tratores", "Adubos sintéticos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual especialização tende a aparecer mais no Neolítico?",
+    "opcoes": ["Oleiros", "Bancários", "Engenheiros navais", "Escribas profissionais"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual troca econômica fica mais comum entre aldeias neolíticas?",
+    "opcoes": ["Escambo local", "Bolsa de valores", "Moeda estatal", "Crédito bancário"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual efeito provável do aumento populacional no Neolítico?",
+    "opcoes": ["Maior pressão sobre recursos", "Fim das doenças", "Desaparecimento da fome", "Isolamento total"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual processo define melhor a transição neolítica?",
+    "opcoes": ["Domesticando plantas e animais", "Descobrindo a escrita", "Fundindo ferro", "Criando impérios"],
+    "correta": 0
+  },
+
+    {
+    "pergunta": "Qual prática ajuda a manter alimento por mais tempo no Neolítico?",
+    "opcoes": ["Armazenamento em potes", "Cunhagem de moedas", "Escrita contábil", "Fundição de bronze"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual mudança no uso do tempo é comum no Neolítico?",
+    "opcoes": ["Trabalho sazonal no cultivo", "Caça diária como base", "Migração constante", "Vida apenas em cavernas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual animal é frequentemente um dos primeiros domesticados?",
+    "opcoes": ["Cabra", "Cavalo", "Elefante", "Tigre"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual técnica é mais ligada ao preparo do solo no Neolítico?",
+    "opcoes": ["Enxada simples", "Arado de ferro", "Máquina a vapor", "Trator"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual elemento cresce em importância com aldeias fixas?",
+    "opcoes": ["Divisão de trabalho", "Nomadismo", "Caça exclusiva", "Ausência de liderança"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual é um traço comum em comunidades neolíticas?",
+    "opcoes": ["Construção de silos", "Portos oceânicos", "Cidades-Estado marítimas", "Estradas pavimentadas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual motivo aumenta conflitos no Neolítico?",
+    "opcoes": ["Disputa por terras", "Falta de caça", "Fim do excedente", "Proibição de plantio"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual relação com o território muda no Neolítico?",
+    "opcoes": ["Ocupar e defender áreas", "Evitar fixação", "Circular sem limites", "Viver só em ilhas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual item é comum em produção artesanal neolítica?",
+    "opcoes": ["Tecidos", "Moedas", "Vidros", "Papel"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual consequência pode vir de viver com animais domesticados?",
+    "opcoes": ["Doenças zoonóticas", "Fim de epidemias", "Imunidade imediata", "Saúde perfeita"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual evidência indica agricultura em sítios neolíticos?",
+    "opcoes": ["Sementes carbonizadas", "Moedas enterradas", "Tabuletas legais", "Estátuas imperiais"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual prática religiosa pode se fortalecer em aldeias neolíticas?",
+    "opcoes": ["Rituais comunitários", "Culto imperial", "Religião monoteísta estatal", "Filosofia escrita"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual mudança alimentar tende a ocorrer no Neolítico?",
+    "opcoes": ["Mais cereais na dieta", "Menos vegetais", "Fim do consumo de carne", "Dieta só de peixe"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual efeito econômico surge com excedentes agrícolas?",
+    "opcoes": ["Trocas mais frequentes", "Fim do escambo", "Uso de cartão de crédito", "Mercado global"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual atividade depende de barro e fogo no Neolítico?",
+    "opcoes": ["Cerâmica", "Metalurgia do aço", "Imprensa", "Navegação astronômica"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual passo facilita administrar excedentes no Neolítico?",
+    "opcoes": ["Medidas e contagem", "Alfabeto completo", "Moeda oficial", "Leis codificadas"],
+    "correta": 0
+  }
+    ]
+  },
   "mesopotamia": {
     "titulo": "Mesopotâmia",
     "perguntas": [
+     {
+    "pergunta": "O nome Mesopotâmia significa, em geral:",
+    "opcoes": ["Terra entre rios", "Terra das pirâmides", "Terra dos cedros", "Terra do sol nascente"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Quais rios são a referência principal da Mesopotâmia?",
+    "opcoes": ["Tigre e Eufrates", "Nilo e Jordão", "Indo e Ganges", "Danúbio e Reno"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A Mesopotâmia ficava, principalmente, onde hoje é:",
+    "opcoes": ["Iraque", "Grécia", "Egito", "Itália"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A região da Mesopotâmia integrava o chamado:",
+    "opcoes": ["Crescente Fértil", "Mundo Helênico", "Sahel", "Mundo Andino"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Por que os rios eram tão importantes na Mesopotâmia?",
+    "opcoes": ["Irrigação e fertilidade", "Mineração de ouro", "Navegação oceânica", "Clima frio constante"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Um desafio comum do ambiente mesopotâmico era:",
+    "opcoes": ["Cheias irregulares", "Ausência total de água", "Geleiras permanentes", "Solo vulcânico recente"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Como costuma ser chamada a economia baseada no controle das águas na região?",
+    "opcoes": ["Agricultura irrigada", "Economia marítima", "Economia industrial", "Economia monetária"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma inovação marcante ligada à região mesopotâmica foi:",
+    "opcoes": ["Escrita cuneiforme", "Imprensa", "Bússola", "Pólvora"],
+    "correta": 0
+  },
 
-      {
-        "pergunta": "O termo Mesopotâmia foi criado por autores gregos muito tempo depois do florescimento dessas civilizações. Qual é o significado literal da palavra Mesopotâmia?",
-        "opcoes": [
-          "Terra fértil",
-          "Terra entre rios",
-          "Terra dos deuses",
-          "Terra das cidades"
-        ],
-        "correta": 1
-      },
+    {
+    "pergunta": "Onde se localizava a Suméria, de forma geral?",
+    "opcoes": ["Sul da Mesopotâmia", "Norte da África", "Península Ibérica", "Vale do Indo"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual é uma cidade frequentemente associada aos sumérios?",
+    "opcoes": ["Ur", "Tebas", "Atenas", "Cartago"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A escrita mais ligada aos sumérios é:",
+    "opcoes": ["Cuneiforme", "Hieroglífica", "Alfabética", "Rúnica"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Em que tipo de suporte os sumérios registravam muitos textos?",
+    "opcoes": ["Tabuletas de argila", "Papiro", "Pergaminho", "Bambu"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Como eram organizadas muitas comunidades sumérias?",
+    "opcoes": ["Cidades-Estado", "Império unificado", "Feudos rurais", "Confederação marítima"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual construção religiosa é típica nas cidades sumérias?",
+    "opcoes": ["Zigurate", "Pirâmide", "Partenon", "Coliseu"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual atividade sustentava a economia suméria em grande parte?",
+    "opcoes": ["Agricultura irrigada", "Caça e coleta", "Pastoreio nômade", "Mineração de prata"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual metal era conhecido e usado na região, antes do ferro dominar?",
+    "opcoes": ["Bronze", "Aço", "Titânio", "Alumínio"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual sistema numérico é associado aos sumérios?",
+    "opcoes": ["Sexagesimal", "Decimal moderno", "Binário", "Duodecimal puro"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma herança do sistema sexagesimal aparece hoje em:",
+    "opcoes": ["Horas e minutos", "Quilômetros", "Graus Celsius", "Polegadas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual divindade suméria está ligada ao céu e ao poder?",
+    "opcoes": ["Anu", "Zeus", "Rá", "Odin"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual deusa suméria é associada a amor e guerra?",
+    "opcoes": ["Inanna", "Afrodite", "Ísis", "Hera"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Como pode ser descrita a religião suméria, em geral?",
+    "opcoes": ["Politeísta", "Monoteísta", "Ateísta", "Dualista"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual documento é um exemplo de literatura ligada à Mesopotâmia com raízes sumérias?",
+    "opcoes": ["Epopeia de Gilgamesh", "Ilíada", "Bíblia", "Eneida"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual atividade urbana era importante nas cidades sumérias?",
+    "opcoes": ["Artesanato e comércio", "Plantation colonial", "Indústria mecanizada", "Comércio oceânico transatlântico"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual desafio político era comum entre cidades sumérias?",
+    "opcoes": ["Guerras entre cidades", "Sucessão dinástica imperial", "Invasões vikings", "Colonização europeia"],
+    "correta": 0
+  },
 
-      {
-        "pergunta": "A expressão Mesopotâmia faz referência direta a dois grandes rios que estruturaram a vida econômica e social da região. Quais eram esses rios?",
-        "opcoes": [
-          "Nilo e Jordão",
-          "Tigre e Eufrates",
-          "Indo e Ganges",
-          "Danúbio e Reno"
-        ],
-        "correta": 1
-      },
+    {
+    "pergunta": "Os acádios eram, em geral, um povo de língua:",
+    "opcoes": ["Semítica", "Indo-europeia", "Banta", "Uralica"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Quem é mais associado à fundação do Império Acádio?",
+    "opcoes": ["Sargão", "Hamurábi", "Assurbanípal", "Nabucodonosor II"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A capital ligada aos acádios é lembrada como:",
+    "opcoes": ["Acádia (Agade)", "Ur", "Nínive", "Babilônia"],
+    "correta": 0
+  },
+  {
+    "pergunta": "O Império Acádio é frequentemente descrito como:",
+    "opcoes": ["Primeiro grande império territorial", "Primeira democracia", "Primeiro reino marítimo", "Primeiro Estado industrial"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual sistema de escrita os acádios usaram amplamente?",
+    "opcoes": ["Cuneiforme", "Hieroglífico", "Alfabeto fenício", "Rúnico"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A expansão acádia ocorreu principalmente sobre:",
+    "opcoes": ["Cidades da Mesopotâmia", "Cidades da Grécia", "Reinos da Índia", "Cidades da China"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual rei acádio é famoso por se declarar divino?",
+    "opcoes": ["Naram-Sin", "Sargão II", "Dario I", "Ramsés II"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Um título ligado ao poder universal na realeza acádia foi:",
+    "opcoes": ["Rei dos quatro cantos", "Faraó do Alto e Baixo", "Cônsul vitalício", "Basileu dos helenos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Na administração acádia, era comum o uso de:",
+    "opcoes": ["Governadores provinciais", "Senado eleito", "Assembleias populares", "Sistema feudal"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A língua acádia tornou-se importante porque foi usada como:",
+    "opcoes": ["Língua diplomática", "Língua litúrgica única", "Código secreto militar", "Dialeto isolado"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma característica cultural do Império Acádio foi:",
+    "opcoes": ["Integração com tradições sumérias", "Rejeição total da cultura local", "Adoção do alfabeto grego", "Proibição do culto aos deuses"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual obra é um exemplo famoso de arte do período acádio?",
+    "opcoes": ["Estela de Naram-Sin", "Porta de Ishtar", "Código de Hamurábi", "Leões de Micenas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A força militar acádia é associada a:",
+    "opcoes": ["Exército organizado", "Cavalaria pesada", "Armas de ferro", "Guerra naval oceânica"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma explicação comum para o enfraquecimento do Império Acádio é:",
+    "opcoes": ["Invasões gutianas", "Guerras púnicas", "Cruzadas", "Conquista macedônica"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A economia imperial acádia dependia muito de:",
+    "opcoes": ["Tributos e redistribuição", "Moeda padronizada", "Bancos privados", "Plantation colonial"],
+    "correta": 0
+  },
+  {
+    "pergunta": "O legado acádio aparece, sobretudo, em:",
+    "opcoes": ["Modelos de império e burocracia", "Democracia direta", "Sufrágio universal", "Direito romano clássico"],
+    "correta": 0
+  },
 
-      {
-        "pergunta": "A maior parte do território da antiga Mesopotâmia corresponde, hoje, principalmente a qual país moderno?",
-        "opcoes": [
-          "Síria",
-          "Irã",
-          "Iraque",
-          "Turquia"
-        ],
-        "correta": 2
-      },
+    {
+    "pergunta": "Os amoritas eram, em geral, um povo de língua:",
+    "opcoes": ["Semítica", "Indo-europeia", "Urálica", "Banta"],
+    "correta": 0
+  },
+  {
+    "pergunta": "O chamado Primeiro Império Babilônico teve como centro a cidade de:",
+    "opcoes": ["Babilônia", "Nínive", "Ur", "Tiro"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual rei é mais associado ao auge do Primeiro Império Babilônico?",
+    "opcoes": ["Hamurábi", "Sargão", "Assurbanípal", "Ciro"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A dinastia amorita em Babilônia ficou conhecida por:",
+    "opcoes": ["Unificar e centralizar", "Criar democracia", "Introduzir ferro em massa", "Fundar colônias marítimas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "O Código de Hamurábi é um exemplo de:",
+    "opcoes": ["Lei escrita", "Poema épico", "Tratado filosófico", "Calendário astronômico"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma ideia associada ao Código de Hamurábi é:",
+    "opcoes": ["Punição proporcional", "Igualdade total", "Fim da propriedade", "Voto universal"],
+    "correta": 0
+  },
+  {
+    "pergunta": "O princípio “olho por olho” é ligado a:",
+    "opcoes": ["Lei de talião", "Direito canônico", "Direito romano", "Lei mercantil moderna"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A escrita usada na administração babilônica era:",
+    "opcoes": ["Cuneiforme", "Rúnica", "Hieroglífica", "Alfabética latina"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A economia do Primeiro Império Babilônico se apoiava em:",
+    "opcoes": ["Agricultura irrigada", "Mineração de ouro", "Comércio oceânico", "Caça e coleta"],
+    "correta": 0
+  },
+  {
+    "pergunta": "No campo religioso, Babilônia ganhou destaque com o deus:",
+    "opcoes": ["Marduk", "Amon", "Zeus", "Odin"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma prática administrativa comum no período era:",
+    "opcoes": ["Cobrança de tributos", "Eleição anual de reis", "Ausência de registros", "Autonomia total das aldeias"],
+    "correta": 0
+  },
+  {
+    "pergunta": "O império de Hamurábi expandiu-se principalmente pela:",
+    "opcoes": ["Conquista militar", "Colonização atlântica", "Aliança com Roma", "Migração para a Índia"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual elemento era importante para o comércio na Mesopotâmia babilônica?",
+    "opcoes": ["Rotas fluviais", "Rotas transoceânicas", "Estradas romanas", "Ferrovias"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma causa comum apontada para o enfraquecimento do Primeiro Império Babilônico é:",
+    "opcoes": ["Invasões hititas", "Guerras médicas", "Cruzadas", "Conquista napoleônica"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Após o saque hitita, quem domina Babilônia por longo período?",
+    "opcoes": ["Cassitas", "Persas", "Gregos", "Romanos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Um legado do Primeiro Império Babilônico é:",
+    "opcoes": ["Tradição jurídica", "Alfabeto fonético", "Democracia direta", "Imprensa"],
+    "correta": 0
+  },
 
-      {
-        "pergunta": "As principais construções religiosas das cidades mesopotâmicas tinham formato de pirâmide escalonada e funcionavam como centros de culto e administração. Como essas construções eram chamadas?",
-        "opcoes": [
-          "Pirâmides",
-          "Zigurates",
-          "Obeliscos",
-          "Templos subterrâneos"
-        ],
-        "correta": 1
-      },
+    {
+    "pergunta": "A região central da Assíria ficava, em geral, no:",
+    "opcoes": ["Norte da Mesopotâmia", "Sul do Egito", "Oeste da Grécia", "Vale do Indo"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma das capitais mais famosas do Império Assírio foi:",
+    "opcoes": ["Nínive", "Babilônia", "Ur", "Tebas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual é uma característica marcante do poder assírio?",
+    "opcoes": ["Militarismo", "Isolacionismo", "Democracia", "Nomadismo"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual prática é associada ao controle assírio sobre povos conquistados?",
+    "opcoes": ["Deportações", "Voto local", "Autonomia total", "Fim de impostos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Que tipo de força armada foi importante nas campanhas assírias?",
+    "opcoes": ["Exército profissional", "Milícias ocasionais", "Mercenários gregos", "Cavalaria feudal"],
+    "correta": 0
+  },
+  {
+    "pergunta": "No cerco a cidades, os assírios ficaram conhecidos por usar:",
+    "opcoes": ["Máquinas de cerco", "Navios de guerra", "Canhões", "Catapultas gregas clássicas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual metal foi crucial para armas e ferramentas no período neoassírio?",
+    "opcoes": ["Ferro", "Cobre puro", "Prata", "Alumínio"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A escrita usada na administração assíria era:",
+    "opcoes": ["Cuneiforme", "Rúnica", "Silabário japonês", "Alfabeto latino"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual rei assírio é ligado a uma grande biblioteca em Nínive?",
+    "opcoes": ["Assurbanípal", "Hamurábi", "Sargão", "Ciro"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A Biblioteca de Nínive reunia principalmente:",
+    "opcoes": ["Tabuletas de argila", "Rolos de papiro", "Pergaminhos medievais", "Livros impressos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual povo participou da derrota final do Império Assírio?",
+    "opcoes": ["Medos", "Fenícios", "Micênicos", "Etruscos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A queda de Nínive ocorreu aproximadamente em:",
+    "opcoes": ["612 a.C.", "332 a.C.", "44 a.C.", "1066 d.C."],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual área esteve frequentemente sob domínio assírio em seu auge?",
+    "opcoes": ["Levante", "Escandinávia", "Japão", "Austrália"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma forma comum de propaganda assíria era:",
+    "opcoes": ["Relevos em palácios", "Teatro público", "Moedas com retratos", "Crônicas impressas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Como pode ser descrita a administração assíria no auge?",
+    "opcoes": ["Centralizada", "Tribal", "Feudal", "Anárquica"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma característica religiosa assíria foi o destaque do deus:",
+    "opcoes": ["Assur", "Marduk", "Rá", "Zeus"],
+    "correta": 0
+  },
 
-      {
-        "pergunta": "Na Mesopotâmia surgiu o sistema de escrita mais antigo conhecido da história humana, desenvolvido inicialmente para atender necessidades práticas das cidades. Qual é o nome dessa escrita?",
-        "opcoes": [
-          "Hieroglífica",
-          "Cuneiforme",
-          "Alfabética",
-          "Linear"
-        ],
-        "correta": 1
-      },
+    {
+    "pergunta": "Os caldeus (neobabilônicos) se destacaram principalmente em:",
+    "opcoes": ["Babilônia", "Nínive", "Ur", "Assur"],
+    "correta": 0
+  },
+  {
+    "pergunta": "O Império Neobabilônico surgiu após a queda de qual grande poder mesopotâmico?",
+    "opcoes": ["Assírios", "Sumérios", "Hititas", "Persas"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual rei é o mais associado ao auge neobabilônico?",
+    "opcoes": ["Nabucodonosor II", "Hamurábi", "Sargão", "Assurbanípal"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma construção frequentemente ligada à Babilônia neobabilônica é:",
+    "opcoes": ["Porta de Ishtar", "Pirâmide de Quéops", "Partenon", "Coliseu"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A famosa via cerimonial de Babilônia ficou conhecida como:",
+    "opcoes": ["Via Processional", "Via Ápia", "Caminho Real Persa", "Rota da Seda"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual povo do Levante teve elites deportadas por Nabucodonosor II?",
+    "opcoes": ["Judeus", "Etruscos", "Vikings", "Maias"],
+    "correta": 0
+  },
+  {
+    "pergunta": "O episódio do exílio na Babilônia é associado a qual cidade?",
+    "opcoes": ["Jerusalém", "Roma", "Esparta", "Alexandria"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Na cultura neobabilônica, qual deus manteve grande destaque?",
+    "opcoes": ["Marduk", "Assur", "Amon", "Odin"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A escrita usada na administração neobabilônica era:",
+    "opcoes": ["Cuneiforme", "Rúnica", "Alfabeto latino", "Hieróglifos egípcios"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma área de conhecimento associada aos caldeus é:",
+    "opcoes": ["Astronomia", "Tipografia", "Química moderna", "Eletricidade"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual elemento é muito associado aos registros astronômicos babilônicos?",
+    "opcoes": ["Tabelas e observações", "Telescópios", "Satélites", "Calendário gregoriano"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual povo conquistou Babilônia e encerrou o Império Neobabilônico?",
+    "opcoes": ["Persas", "Egípcios", "Romanos", "Cartagineses"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A conquista persa de Babilônia ocorreu em:",
+    "opcoes": ["539 a.C.", "612 a.C.", "1200 a.C.", "31 a.C."],
+    "correta": 0
+  },
+  
+  {
+    "pergunta": "Qual tema aparece com força na arte babilônica neotardia?",
+    "opcoes": ["Tijolos esmaltados", "Mármore esculpido", "Mosaicos bizantinos", "Vitral gótico"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Uma ideia associada ao poder neobabilônico é:",
+    "opcoes": ["Restauração de Babilônia", "Criação de pólis", "Unificação da Itália", "Feudalismo"],
+    "correta": 0
+  },
 
-      {
-        "pergunta": "A escrita cuneiforme era registrada por meio de marcas em forma de cunha feitas em um material abundante na região. Em qual material esses textos eram gravados?",
-        "opcoes": [
-          "Papiro",
-          "Pergaminho",
-          "Tábuas de argila",
-          "Placas de madeira"
-        ],
-        "correta": 2
-      },
-
-      {
-        "pergunta": "Quando surgiu, a escrita cuneiforme não tinha finalidade literária ou religiosa. Qual era seu principal uso inicial?",
-        "opcoes": [
-          "Registro de mitos",
-          "Controle administrativo e contábil",
-          "Ensino religioso",
-          "Correspondência pessoal"
-        ],
-        "correta": 1
-      },
-
-      {
-        "pergunta": "A obra literária mais antiga conhecida da história humana foi registrada na Mesopotâmia e narra as aventuras de um rei lendário. Qual é o nome dessa obra?",
-        "opcoes": [
-          "Código de Hamurábi",
-          "Epopeia de Gilgámesh",
-          "Livro dos Mortos",
-          "Ilíada"
-        ],
-        "correta": 1
-      },
-
-      {
-        "pergunta": "A Epopeia de Gilgámesh trata principalmente de uma questão central da condição humana, explorada a partir da amizade, da morte e da jornada do herói. Qual é o tema central dessa narrativa?",
-        "opcoes": [
-          "Expansão territorial",
-          "Busca pela imortalidade",
-          "Origem dos deuses",
-          "Fundação das cidades"
-        ],
-        "correta": 1
-      },
-
-      {
-        "pergunta": "Na Mesopotâmia viveu a primeira autora conhecida da história a assinar seus próprios textos. Filha do rei acádio Sargão, ela foi alta sacerdotisa, escreveu hinos religiosos em primeira pessoa e teve seu nome preservado. Quem foi essa autora?",
-        "opcoes": [
-          "Ishtar",
-          "Enheduana",
-          "Ninsun",
-          "Semíramis"
-        ],
-        "correta": 1
-      },
-
-      {
-        "pergunta": "Quem foram os fundadores das primeiras cidades na Mesopotâmia, como Ur e Uruk?",
-        "opcoes": [
-          "Acádios",
-          "Sumérios",
-          "Babilônios",
-          "Assírios"
-        ],
-        "correta": 1
-      },
-      
-      {
-        "pergunta": "Os primeiros povos responsáveis pela fundação das cidades mesopotâmicas foram os sumérios, estabelecidos principalmente no sul da região. Como se organizavam politicamente essas cidades?",
-        "opcoes": [
-          "Império unificado",
-          "Cidades-estado independentes",
-          "Confederação tribal",
-          "Monarquia feudal"
-        ],
-        "correta": 1
-      },
-
-      {
-        "pergunta": "Além da escrita cuneiforme, os sumérios desenvolveram outras inovações fundamentais para a história humana. Qual dessas é corretamente atribuída a eles e está presente em nossa forma de marcar o tempo até os dias de hoje?",
-        "opcoes": [
-          "Sistema sexagesimal (base 60)",
-          "Alfabeto fonético",
-          "Calendário solar anual",
-          "Democracia representativa"
-        ],
-        "correta": 0
-      },
-
-      {
-        "pergunta": "Qual civilização mesopotâmica formou um dos primeiros impérios territoriais da história?",
-        "opcoes": [
-          "Assírios",
-          "Acádios",
-          "Caldeus",
-          "Hititas"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "O principal governante do Império Acádio foi Sargão, responsável por uma transformação política inédita na região. Qual foi sua principal realização?",
-        "opcoes": [
-          "Criar cidades-estado independentes",
-          "Unificar várias cidades sob um único poder imperial",
-          "Estabelecer o primeiro código de leis",
-          "Fundar a cidade da Babilônia"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "Durante o Império Acádio, ocorreu uma mudança importante na cultura escrita mesopotâmica. Qual foi a principal inovação introduzida pelos acádios nesse campo?",
-        "opcoes": [
-          "Criação de um novo sistema de escrita",
-          "Uso de uma língua semítica na escrita cuneiforme",
-          "Substituição da escrita por registros orais",
-          "Abandono do sumério como língua culta"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "Após o declínio do Império Acádio, um povo de origem amorita estabeleceu um novo reino na Mesopotâmia central. Qual cidade tornou-se o principal centro político desse reino?",
-        "opcoes": [
-          "Ur",
-          "Lagash",
-          "Babilônia",
-          "Nínive"
-        ],
-        "correta": 2
-      },
-      {
-        "pergunta": "O rei mais conhecido da Babilônia Antiga foi Hamurábi. Por qual motivo histórico ele é lembrado?",
-        "opcoes": [
-          "Conquistas marítimas",
-          "Elaboração de um código de leis escrito",
-          "Criação do alfabeto",
-          "Reforma religiosa monoteísta"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "O Código de Hamurábi estabelecia punições diferentes conforme a posição social das pessoas envolvidas. Como é conhecido esse princípio jurídico?",
-        "opcoes": [
-          "Direito natural",
-          "Lei de talião",
-          "Justiça universal",
-          "Direito consuetudinário"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "No norte da Mesopotâmia, os assírios construíram um império marcado pela expansão territorial. Qual característica foi central para o poder assírio?",
-        "opcoes": [
-          "Pacifismo religioso",
-          "Militarismo intenso",
-          "Economia baseada no comércio marítimo",
-          "Isolamento cultural"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "Durante o auge do Império Assírio, uma cidade tornou-se seu principal centro político e administrativo e também abrigou a sede da lendária Biblioteca de Assurbanípal, uma coleção de milhares de placas de argila contendo escritos em cuneiforme. Qual era essa cidade?",
-        "opcoes": [
-          "Uruk",
-          "Babilônia",
-          "Nínive",
-          "Eridu"
-        ],
-        "correta": 2
-      },
-      {
-        "pergunta": "Os assírios utilizavam deportações em massa como estratégia de dominação imperial. Qual era o principal objetivo dessa prática?",
-        "opcoes": [
-          "Gerar mais empregos a cidadãos assírios",
-          "Evitar revoltas e resistências locais",
-          "Promover integração cultural voluntária",
-          "Expandir a produção agrícola"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "Após a queda do Império Assírio, qual povo assumiu a região criando o Império Neobabilônico?",
-        "opcoes": [
-          "Sumérios",
-          "Caldeus",
-          "Acádios",
-          "Elamitas"
-        ],
-        "correta": 2
-      },
-      {
-        "pergunta": "O governante mais associado ao auge do Império Neobabilônico foi Nabucodonosor II. Qual realização marcou seu governo?",
-        "opcoes": [
-          "Fundação do Império Acádio",
-          "Reconstrução monumental da Babilônia",
-          "Criação do alfabeto fonético",
-          "Conversão oficial ao monoteísmo"
-        ],
-        "correta": 1
-      },
-
-      {
-        "pergunta": "Quais construções lendárias são associadas a Nabucodonosor II?",
-        "opcoes": [
-          "Vale dos Reis e Pirâmides de Gizé",
-          "Jardins Suspensos da Babilônia e Torre de Babel",
-          "Jardins Suspensos da Babilônia e Vale dos Reis",
-          "Torre de Babel e Satrapas de Ciro"
-        ],
-        "correta": 1
-      },
-      
-      {
-  "pergunta": "Como era chamado o governante-rei de uma cidade-estado mesopotâmica?",
-  "opcoes": [
-    "Faraó",
-    "Lugal",
-    "Basileu",
-    "Cônsul"
-  ],
-  "correta": 1
-},
-{
-  "pergunta": "Qual título era dado ao governante-sacerdote nas cidades mesopotâmicas?",
-  "opcoes": [
-    "Vizir",
-    "Patesi",
-    "Sumo sacerdote",
-    "Nômade"
-  ],
-  "correta": 1
-},
-{
-  "pergunta": "Qual deus sumério era associado ao céu e à autoridade suprema?",
-  "opcoes": [
-    "Enki",
-    "Anu",
-    "Ishtar",
-    "Nergal"
-  ],
-  "correta": 1
-},
-{
-  "pergunta": "Qual divindade mesopotâmica estava ligada à sabedoria, à água doce e à criação?",
-  "opcoes": [
-    "Enlil",
-    "Shamash",
-    "Enki",
-    "Marduk"
-  ],
-  "correta": 2
-},
-{
-  "pergunta": "Qual deusa mesopotâmica era associada ao amor, à fertilidade e à guerra?",
-  "opcoes": [
-    "Ereshkigal",
-    "Ishtar",
-    "Ninsun",
-    "Tiamat"
-  ],
-  "correta": 1
-},
-{
-  "pergunta": "Qual deus tornou-se o principal da Babilônia, especialmente durante o reinado de Hamurábi?",
-  "opcoes": [
-    "Anu",
-    "Enlil",
-    "Marduk",
-    "Shamash"
-  ],
-  "correta": 2
-},
-      
-      {
-        "pergunta": "A autonomia política da Mesopotâmia chegou ao fim no século VI a.C., quando a região foi conquistada por um grande império estrangeiro. Qual foi esse império?",
-        "opcoes": [
-          "Egípcio",
-          "Grego",
-          "Persa",
-          "Romano"
-        ],
-        "correta": 2
-      }
-      
+  {
+    "pergunta": "Qual rei persa é ligado à tomada de Babilônia em 539 a.C.?",
+    "opcoes": ["Ciro II", "Dario III", "Xerxes", "Cambises II"],
+    "correta": 0
+  }
 
     ]
   },
-
   "hebreus": {
     "titulo": "Hebreus",
     "perguntas": [
       {
-        "pergunta": "1) A fase mais antiga da história hebraica, marcada por Abraão, Isaac e Jacó, é conhecida como:",
-        "opcoes": [
-          "Período dos Juízes",
-          "Era dos Patriarcas",
-          "Período Helenístico",
-          "Período Romano"
-        ],
+        "pergunta": "Qual foi a capital do Reino de Israel sob o rei Davi, segundo a tradição bíblica?",
+        "opcoes": ["Jericó", "Jerusalém", "Damasco", "Babilônia"],
         "correta": 1
-      },
+      }
+    ]
+  },
+  "persas": {
+    "titulo": "Persas",
+    "perguntas": [
       {
-        "pergunta": "2) Segundo a tradição, Abraão sai de Ur e migra para Canaã. Ur é associada historicamente a qual grande região cultural?",
-        "opcoes": [
-          "Mesopotâmia",
-          "Escandinávia",
-          "Península Ibérica",
-          "Vale do Indo"
-        ],
+        "pergunta": "Qual rei persa é associado ao início do Império Aquemênida?",
+        "opcoes": ["Ciro, o Grande", "Hamurábi", "Nabucodonosor II", "Alexandre, o Grande"],
         "correta": 0
-      },
+      }
+    ]
+  },
+  "fenicios": {
+    "titulo": "Fenícios",
+    "perguntas": [
       {
-        "pergunta": "3) Canaã, cenário central das narrativas patriarcais, corresponde aproximadamente hoje a:",
-        "opcoes": [
-          "Itália e Grécia",
-          "Israel/Palestina e partes do Líbano e Jordânia",
-          "Marrocos e Argélia",
-          "Turquia central e Cáucaso"
-        ],
+        "pergunta": "Qual contribuição fenícia teve grande impacto na história da escrita?",
+        "opcoes": ["Hieróglifos", "Alfabeto fonético", "Cuneiforme", "Imprensa de tipos móveis"],
         "correta": 1
-      },
+      }
+    ]
+  },
+  "egito_antigo": {
+    "titulo": "Egito Antigo",
+    "perguntas": [
       {
-        "pergunta": "4) Na tradição, o novo nome de Jacó, ligado à origem do povo, é:",
-        "opcoes": [
-          "Israel",
-          "Judá",
-          "Moisés",
-          "Samuel"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "5) A ideia religiosa que se torna base da identidade hebraica e aparece como aliança com Deus é:",
-        "opcoes": [
-          "Politeísmo",
-          "Monoteísmo",
-          "Ateísmo",
-          "Culto ao imperador"
-        ],
+        "pergunta": "Qual rio era a base da agricultura e da vida no Egito Antigo?",
+        "opcoes": ["Tigre", "Nilo", "Eufrates", "Jordão"],
         "correta": 1
-      },
+      }
+    ]
+  },
+  "reino_de_cuxe": {
+    "titulo": "Reino de Cuxe",
+    "perguntas": [
       {
-        "pergunta": "6) A passagem dos patriarcas para o período no Egito é tradicionalmente ligada à história de:",
-        "opcoes": [
-          "Sansão",
-          "José (vendido pelos irmãos)",
-          "Saul",
-          "Salomão"
-        ],
+        "pergunta": "Qual cidade é frequentemente citada como importante centro do Reino de Cuxe no período meroítico?",
+        "opcoes": ["Meroé", "Cartago", "Atenas", "Tiro"],
+        "correta": 0
+      }
+    ]
+  },
+  "maias": {
+    "titulo": "Maias",
+    "perguntas": [
+      {
+        "pergunta": "Em qual região se desenvolveu a civilização maia?",
+        "opcoes": ["Mesopotâmia", "Mesoamérica", "Vale do Indo", "Península Arábica"],
         "correta": 1
-      },
+      }
+    ]
+  },
+  "imperio_axum": {
+    "titulo": "Império Axum",
+    "perguntas": [
       {
-        "pergunta": "7) A fase do Êxodo é lembrada como saída do Egito sob a liderança de:",
-        "opcoes": [
-          "Davi",
-          "Moisés",
-          "Elias",
-          "Esdras"
-        ],
+        "pergunta": "O Império de Axum localizava-se principalmente em qual região atual?",
+        "opcoes": ["Etiópia e Eritreia", "Itália e Grécia", "Iraque e Síria", "México e Guatemala"],
+        "correta": 0
+      }
+    ]
+  },
+  "cartago": {
+    "titulo": "Cartago",
+    "perguntas": [
+      {
+        "pergunta": "Cartago foi fundada por colonos originários de qual cidade fenícia, segundo a tradição?",
+        "opcoes": ["Babilônia", "Tiro", "Ur", "Menfis"],
         "correta": 1
-      },
+      }
+    ]
+  },
+  "terra_de_punt": {
+    "titulo": "Terra de Punt",
+    "perguntas": [
       {
-        "pergunta": "8) A celebração que recorda a libertação do Egito e marca a identidade do povo é:",
-        "opcoes": [
-          "Hanucá",
-          "Pessach (Páscoa judaica)",
-          "Purim",
-          "Shavuot"
-        ],
+        "pergunta": "A Terra de Punt é conhecida principalmente por suas relações comerciais com qual civilização?",
+        "opcoes": ["Egito Antigo", "Roma Antiga", "Maias", "Império Persa"],
+        "correta": 0
+      }
+    ]
+  },
+  "grecia_antiga": {
+    "titulo": "Grécia Antiga",
+    "perguntas": [
+      {
+        "pergunta": "Qual cidade-estado grega é frequentemente associada ao desenvolvimento da democracia?",
+        "opcoes": ["Esparta", "Atenas", "Corinto", "Tebas"],
         "correta": 1
-      },
+      }
+    ]
+  },
+  "roma_antiga": {
+    "titulo": "Roma Antiga",
+    "perguntas": [
       {
-        "pergunta": "9) O evento do Sinai, central no Êxodo, é descrito como a entrega de:",
-        "opcoes": [
-          "Os Dez Mandamentos e a Lei (Torá)",
-          "As Doze Tábuas romanas",
-          "O Código de Hamurábi",
-          "Os Evangelhos"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "10) No período do deserto, o local móvel de culto e reunião, anterior ao Templo, era o:",
-        "opcoes": [
-          "Coliseu",
-          "Tabernáculo (Tenda do Encontro)",
-          "Zigurate",
-          "Partenon"
-        ],
+        "pergunta": "Qual foi o primeiro imperador de Roma, segundo a tradição histórica?",
+        "opcoes": ["Júlio César", "Augusto", "Nero", "Constantino"],
         "correta": 1
-      },
-      {
-        "pergunta": "11) O objeto sagrado associado à presença divina e à aliança, carregado no período do deserto, é a:",
-        "opcoes": [
-          "Arca da Aliança",
-          "Pedra de Roseta",
-          "Estela de Merneptá",
-          "Tábua de argila cuneiforme"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "12) Após a travessia, a fase inicial em Canaã (antes de reis), com conflitos e lideranças locais, é chamada de:",
-        "opcoes": [
-          "Era dos Patriarcas",
-          "Período dos Juízes",
-          "Período do Segundo Templo",
-          "Período Bizantino"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "13) No Período dos Juízes, a forma de liderança mais comum era:",
-        "opcoes": [
-          "Reis hereditários permanentes",
-          "Governadores persas",
-          "Líderes carismáticos levantados em crises",
-          "Senadores eleitos por voto"
-        ],
-        "correta": 2
-      },
-      {
-        "pergunta": "14) A transição para a monarquia é justificada na tradição por uma necessidade principal:",
-        "opcoes": [
-          "Criar comércio marítimo com a China",
-          "Unificar o povo e fortalecer a defesa militar",
-          "Abolir a religião e o culto",
-          "Migrar para a Europa"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "15) O primeiro rei de Israel, segundo a tradição bíblica, foi:",
-        "opcoes": [
-          "Saul",
-          "Davi",
-          "Salomão",
-          "Josias"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "16) Um adversário frequente nas narrativas do início da monarquia, associado à faixa costeira, eram os:",
-        "opcoes": [
-          "Persas",
-          "Filisteus",
-          "Romanos",
-          "Macedônios"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "17) Davi é considerado decisivo por consolidar o poder e estabelecer como capital a cidade de:",
-        "opcoes": [
-          "Samaria",
-          "Jerusalém",
-          "Tiro",
-          "Babilônia"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "18) Sob Salomão, a centralização do culto em Jerusalém é marcada pela construção do:",
-        "opcoes": [
-          "Primeiro Templo",
-          "Segundo Templo",
-          "Partenon",
-          "Zigurate"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "19) Após Salomão, a monarquia unida se divide em dois reinos. Quais são eles?",
-        "opcoes": [
-          "Judá (Sul) e Israel (Norte)",
-          "Assíria e Babilônia",
-          "Egito e Núbia",
-          "Pérsia e Média"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "20) No período dos reinos divididos, os profetas ganham destaque porque:",
-        "opcoes": [
-          "Defendiam apenas conquistas militares",
-          "Denunciavam injustiças e cobravam fidelidade à aliança",
-          "Organizavam eleições e partidos",
-          "Propagavam o culto ao imperador"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "21) O Reino de Israel (Norte) caiu primeiro, conquistado por qual império?",
-        "opcoes": [
-          "Assírio",
-          "Romano",
-          "Persa",
-          "Macedônico"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "22) Uma consequência associada à queda do Reino do Norte foi:",
-        "opcoes": [
-          "A destruição imediata do Segundo Templo",
-          "Deportações e dispersão de parte da população",
-          "A conversão de Roma ao judaísmo",
-          "A fundação de Constantinopla"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "23) O Reino de Judá (Sul) foi conquistado posteriormente por qual potência que destruiu o Primeiro Templo?",
-        "opcoes": [
-          "Babilônia (neobabilônios)",
-          "Macedônia",
-          "Cartago",
-          "Egito ptolomaico"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "24) A destruição do Primeiro Templo e o Exílio Babilônico são tradicionalmente datados de:",
-        "opcoes": [
-          "586 a.C.",
-          "332 a.C.",
-          "70 d.C.",
-          "135 d.C."
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "25) No Exílio, a identidade judaica se fortalece especialmente por meio de:",
-        "opcoes": [
-          "Arenas e jogos públicos",
-          "Lei, textos sagrados e vida comunitária",
-          "Mitologia nórdica",
-          "Culto aos deuses olímpicos"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "26) Quem conquistou a Babilônia e permitiu o retorno de judeus a Judá, iniciando o domínio persa?",
-        "opcoes": [
-          "Ciro, o Grande",
-          "Nabucodonosor II",
-          "Júlio César",
-          "Antíoco IV"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "27) A reconstrução do santuário após o retorno marca o início do período do:",
-        "opcoes": [
-          "Segundo Templo",
-          "Primeiro Templo",
-          "Período dos Juízes",
-          "Período Patriarcal"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "28) No período persa e pós-exílio, qual língua se torna muito comum no cotidiano, ao lado do hebraico religioso?",
-        "opcoes": [
-          "Latim",
-          "Aramaico",
-          "Grego micênico",
-          "Sânscrito"
-        ],
-        "correta": 1
-      },
-      {
-        "pergunta": "29) A conquista de Alexandre, o Grande, intensifica um processo cultural sobre os judeus conhecido como:",
-        "opcoes": [
-          "Helenização",
-          "Feudalização",
-          "Industrialização",
-          "Colonização atlântica"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "30) A Revolta dos Macabeus (séc. II a.C.) foi uma reação principalmente a:",
-        "opcoes": [
-          "Perseguição religiosa e imposições helenísticas",
-          "Expansão do cristianismo no Império Romano",
-          "Invasões vikings no Mediterrâneo",
-          "Conquista árabe de Jerusalém"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "31) A festa associada à rededicação do Templo após a vitória macabeia é:",
-        "opcoes": [
-          "Hanucá",
-          "Pessach",
-          "Purim",
-          "Yom Kippur"
-        ],
-        "correta": 0
-      },
-      {
-        "pergunta": "32) A Grande Revolta Judaica contra Roma culminou em 70 d.C. com:",
-        "opcoes": [
-          "A destruição do Segundo Templo em Jerusalém",
-          "A destruição do Primeiro Templo em Jerusalém",
-          "A queda do Império Romano do Ocidente",
-          "A assinatura da Paz de Vestfália"
-        ],
-        "correta": 0
       }
     ]
   }
