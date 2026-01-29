@@ -344,3 +344,331 @@
     ]
   }
 }
+
+{
+  "hebreus": {
+    "titulo": "Hebreus",
+    "perguntas": [
+      {
+        "pergunta": "1) A fase mais antiga da história hebraica, marcada por Abraão, Isaac e Jacó, é conhecida como:",
+        "opcoes": [
+          "Período dos Juízes",
+          "Era dos Patriarcas",
+          "Período Helenístico",
+          "Período Romano"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "2) Segundo a tradição, Abraão sai de Ur e migra para Canaã. Ur é associada historicamente a qual grande região cultural?",
+        "opcoes": [
+          "Mesopotâmia",
+          "Escandinávia",
+          "Península Ibérica",
+          "Vale do Indo"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "3) Canaã, cenário central das narrativas patriarcais, corresponde aproximadamente hoje a:",
+        "opcoes": [
+          "Itália e Grécia",
+          "Israel/Palestina e partes do Líbano e Jordânia",
+          "Marrocos e Argélia",
+          "Turquia central e Cáucaso"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "4) Na tradição, o novo nome de Jacó, ligado à origem do povo, é:",
+        "opcoes": [
+          "Israel",
+          "Judá",
+          "Moisés",
+          "Samuel"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "5) A ideia religiosa que se torna base da identidade hebraica e aparece como aliança com Deus é:",
+        "opcoes": [
+          "Politeísmo",
+          "Monoteísmo",
+          "Ateísmo",
+          "Culto ao imperador"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "6) A passagem dos patriarcas para o período no Egito é tradicionalmente ligada à história de:",
+        "opcoes": [
+          "Sansão",
+          "José (vendido pelos irmãos)",
+          "Saul",
+          "Salomão"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "7) A fase do Êxodo é lembrada como saída do Egito sob a liderança de:",
+        "opcoes": [
+          "Davi",
+          "Moisés",
+          "Elias",
+          "Esdras"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "8) A celebração que recorda a libertação do Egito e marca a identidade do povo é:",
+        "opcoes": [
+          "Hanucá",
+          "Pessach (Páscoa judaica)",
+          "Purim",
+          "Shavuot"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "9) O evento do Sinai, central no Êxodo, é descrito como a entrega de:",
+        "opcoes": [
+          "Os Dez Mandamentos e a Lei (Torá)",
+          "As Doze Tábuas romanas",
+          "O Código de Hamurábi",
+          "Os Evangelhos"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "10) No período do deserto, o local móvel de culto e reunião, anterior ao Templo, era o:",
+        "opcoes": [
+          "Coliseu",
+          "Tabernáculo (Tenda do Encontro)",
+          "Zigurate",
+          "Partenon"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "11) O objeto sagrado associado à presença divina e à aliança, carregado no período do deserto, é a:",
+        "opcoes": [
+          "Arca da Aliança",
+          "Pedra de Roseta",
+          "Estela de Merneptá",
+          "Tábua de argila cuneiforme"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "12) Após a travessia, a fase inicial em Canaã (antes de reis), com conflitos e lideranças locais, é chamada de:",
+        "opcoes": [
+          "Era dos Patriarcas",
+          "Período dos Juízes",
+          "Período do Segundo Templo",
+          "Período Bizantino"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "13) No Período dos Juízes, a forma de liderança mais comum era:",
+        "opcoes": [
+          "Reis hereditários permanentes",
+          "Governadores persas",
+          "Líderes carismáticos levantados em crises",
+          "Senadores eleitos por voto"
+        ],
+        "correta": 2
+      },
+      {
+        "pergunta": "14) A transição para a monarquia é justificada na tradição por uma necessidade principal:",
+        "opcoes": [
+          "Criar comércio marítimo com a China",
+          "Unificar o povo e fortalecer a defesa militar",
+          "Abolir a religião e o culto",
+          "Migrar para a Europa"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "15) O primeiro rei de Israel, segundo a tradição bíblica, foi:",
+        "opcoes": [
+          "Saul",
+          "Davi",
+          "Salomão",
+          "Josias"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "16) Um adversário frequente nas narrativas do início da monarquia, associado à faixa costeira, eram os:",
+        "opcoes": [
+          "Persas",
+          "Filisteus",
+          "Romanos",
+          "Macedônios"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "17) Davi é considerado decisivo por consolidar o poder e estabelecer como capital a cidade de:",
+        "opcoes": [
+          "Samaria",
+          "Jerusalém",
+          "Tiro",
+          "Babilônia"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "18) Sob Salomão, a centralização do culto em Jerusalém é marcada pela construção do:",
+        "opcoes": [
+          "Primeiro Templo",
+          "Segundo Templo",
+          "Partenon",
+          "Zigurate"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "19) Após Salomão, a monarquia unida se divide em dois reinos. Quais são eles?",
+        "opcoes": [
+          "Judá (Sul) e Israel (Norte)",
+          "Assíria e Babilônia",
+          "Egito e Núbia",
+          "Pérsia e Média"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "20) No período dos reinos divididos, os profetas ganham destaque porque:",
+        "opcoes": [
+          "Defendiam apenas conquistas militares",
+          "Denunciavam injustiças e cobravam fidelidade à aliança",
+          "Organizavam eleições e partidos",
+          "Propagavam o culto ao imperador"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "21) O Reino de Israel (Norte) caiu primeiro, conquistado por qual império?",
+        "opcoes": [
+          "Assírio",
+          "Romano",
+          "Persa",
+          "Macedônico"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "22) Uma consequência associada à queda do Reino do Norte foi:",
+        "opcoes": [
+          "A destruição imediata do Segundo Templo",
+          "Deportações e dispersão de parte da população",
+          "A conversão de Roma ao judaísmo",
+          "A fundação de Constantinopla"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "23) O Reino de Judá (Sul) foi conquistado posteriormente por qual potência que destruiu o Primeiro Templo?",
+        "opcoes": [
+          "Babilônia (neobabilônios)",
+          "Macedônia",
+          "Cartago",
+          "Egito ptolomaico"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "24) A destruição do Primeiro Templo e o Exílio Babilônico são tradicionalmente datados de:",
+        "opcoes": [
+          "586 a.C.",
+          "332 a.C.",
+          "70 d.C.",
+          "135 d.C."
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "25) No Exílio, a identidade judaica se fortalece especialmente por meio de:",
+        "opcoes": [
+          "Arenas e jogos públicos",
+          "Lei, textos sagrados e vida comunitária",
+          "Mitologia nórdica",
+          "Culto aos deuses olímpicos"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "26) Quem conquistou a Babilônia e permitiu o retorno de judeus a Judá, iniciando o domínio persa?",
+        "opcoes": [
+          "Ciro, o Grande",
+          "Nabucodonosor II",
+          "Júlio César",
+          "Antíoco IV"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "27) A reconstrução do santuário após o retorno marca o início do período do:",
+        "opcoes": [
+          "Segundo Templo",
+          "Primeiro Templo",
+          "Período dos Juízes",
+          "Período Patriarcal"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "28) No período persa e pós-exílio, qual língua se torna muito comum no cotidiano, ao lado do hebraico religioso?",
+        "opcoes": [
+          "Latim",
+          "Aramaico",
+          "Grego micênico",
+          "Sânscrito"
+        ],
+        "correta": 1
+      },
+      {
+        "pergunta": "29) A conquista de Alexandre, o Grande, intensifica um processo cultural sobre os judeus conhecido como:",
+        "opcoes": [
+          "Helenização",
+          "Feudalização",
+          "Industrialização",
+          "Colonização atlântica"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "30) A Revolta dos Macabeus (séc. II a.C.) foi uma reação principalmente a:",
+        "opcoes": [
+          "Perseguição religiosa e imposições helenísticas",
+          "Expansão do cristianismo no Império Romano",
+          "Invasões vikings no Mediterrâneo",
+          "Conquista árabe de Jerusalém"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "31) A festa associada à rededicação do Templo após a vitória macabeia é:",
+        "opcoes": [
+          "Hanucá",
+          "Pessach",
+          "Purim",
+          "Yom Kippur"
+        ],
+        "correta": 0
+      },
+      {
+        "pergunta": "32) A Grande Revolta Judaica contra Roma culminou em 70 d.C. com:",
+        "opcoes": [
+          "A destruição do Segundo Templo em Jerusalém",
+          "A destruição do Primeiro Templo em Jerusalém",
+          "A queda do Império Romano do Ocidente",
+          "A assinatura da Paz de Vestfália"
+        ],
+        "correta": 0
+      }
+    ]
+  }
+}
