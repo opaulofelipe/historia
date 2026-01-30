@@ -1,4 +1,4 @@
-const CACHE = "historia-quiz-v2";
+const CACHE = "historia-quiz-v3";
 
 const ASSETS = [
   "./",
@@ -8,6 +8,7 @@ const ASSETS = [
   "./dados.json",
   "./manifest.json",
   "./IMG_0773.jpeg"
+  "./acerto.mp3"
 ];
 
 self.addEventListener("install", (e) => {
