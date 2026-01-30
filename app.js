@@ -8,42 +8,21 @@ let idx = 0;               // pergunta atual (0-based)
 let locked = false;        // trava após acerto
 let currentShuffle = null; // { options: [...], correctIndex: n }
 
-/* ========= SOM (plim) SEM ARQUIVO ========= */
-let audioCtx = null;
+/* ========= SOM DE ACERTO (MP3) ========= */
+// Coloque acerto.mp3 na raiz do projeto
+const CORRECT_SFX_URL = "./acerto.mp3";
+const correctSfx = new Audio(CORRECT_SFX_URL);
+correctSfx.preload = "auto";
+correctSfx.volume = 0.9;
 
 function playCorrectSound() {
   try {
-    const AC = window.AudioContext || window.webkitAudioContext;
-    if (!AC) return;
+    correctSfx.pause();
+    correctSfx.currentTime = 0;
 
-    if (!audioCtx) audioCtx = new AC();
-    if (audioCtx.state === "suspended") audioCtx.resume();
-
-    const t0 = audioCtx.currentTime;
-
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-
-    // timbre "plim"
-    osc.type = "triangle";
-
-    // envelope curto (ataque + decay)
-    gain.gain.setValueAtTime(0.0001, t0);
-    gain.gain.exponentialRampToValueAtTime(0.22, t0 + 0.01);
-    gain.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.18);
-
-    // leve "subida" de pitch
-    osc.frequency.setValueAtTime(880, t0);
-    osc.frequency.exponentialRampToValueAtTime(1320, t0 + 0.09);
-
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
-
-    osc.start(t0);
-    osc.stop(t0 + 0.20);
-  } catch (_) {
-    // não quebra o app se o áudio falhar
-  }
+    const p = correctSfx.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
+  } catch (_) {}
 }
 
 /* ========= CARREGAMENTO ========= */
@@ -128,10 +107,10 @@ function renderHome() {
 
     view.innerHTML += `
       <div class="card clickable" onclick="iniciar('${civ}')">
-        <h2 style="margin:0 0 10px 0;">${escapeHtml(dados[civ].titulo || civ)}</h2>
+        <h2 style="margin:0 0 8px 0;">${escapeHtml(dados[civ].titulo || civ)}</h2>
         <div class="progress"><span style="width:${pct}%"></span></div>
         <div class="muted" style="margin-top:8px;">
-          ${pct}% concluído • ${p}/${total} perguntas
+          ${pct}% concluído • ${p}/${total}
         </div>
       </div>
     `;
@@ -144,6 +123,17 @@ function renderHome() {
 function iniciar(civ) {
   setHomeMode(false);
   civAtual = civ;
+
+  // iOS/PWA: “destrava” o áudio no primeiro gesto
+  try {
+    const p = correctSfx.play();
+    if (p && typeof p.then === "function") {
+      p.then(() => {
+        correctSfx.pause();
+        correctSfx.currentTime = 0;
+      }).catch(() => {});
+    }
+  } catch (_) {}
 
   const total = (dados[civAtual]?.perguntas || []).length;
   idx = clamp(getProg(civAtual), 0, total);
@@ -178,7 +168,6 @@ function renderQuiz() {
     return;
   }
 
-  // progresso salvo = mais longe que já chegou
   const progSalvo = clamp(getProg(civAtual), 0, total);
   const pct = percent(progSalvo, total);
 
@@ -239,12 +228,12 @@ function responder(i) {
     btn.classList.remove("wrong");
     btn.classList.add("correct");
 
-    // reinicia e aplica a animação de borda (border-run)
+    // reinicia e aplica a animação de borda
     btn.classList.remove("border-run");
-    void btn.offsetWidth; // reflow para reiniciar animação
+    void btn.offsetWidth;
     btn.classList.add("border-run");
 
-    // som de acerto
+    // som mp3
     playCorrectSound();
 
     // trava opções
@@ -263,14 +252,14 @@ function responder(i) {
       scrollToTop();
     }, 620);
   } else {
-    // errado: pisca vermelho e permite tentar novamente
+    // errado: pisca vermelho e permite tentar de novo
     btn.classList.remove("wrong");
-    void btn.offsetWidth; // reinicia animação de erro
+    void btn.offsetWidth;
     btn.classList.add("wrong");
 
     setTimeout(() => {
       btn.classList.remove("wrong");
-    }, 560);
+    }, 520);
   }
 }
 
